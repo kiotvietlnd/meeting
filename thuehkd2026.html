@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline Đào tạo Thuế 2026 - KiotViet E-Learning</title>
+    <title>Open Talk 2026 - Giải đáp vấn đề Thuế & Phần mềm KiotViet</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Be Vietnam Pro', sans-serif; }
+        
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f0f9ff; }
@@ -28,10 +30,7 @@
         .shape3 { background: #06b6d4; width: 400px; height: 400px; top: 30%; left: 50%; transform: translateX(-50%); border-radius: 50%; animation: float 18s infinite; opacity: 0.2; }
         @keyframes float { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(30px, 50px); } }
         
-        /* TOC Active State */
-        .toc-link.active { font-weight: 700; border-left: 3px solid #0ea5e9; background-color: #f0f9ff; color: #0284c7; }
-        
-        /* Gradient Text */
+        /* Gradient Text - Added small padding to prevent accent clipping in Vietnamese */
         .text-gradient { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
         /* Custom Table */
@@ -55,51 +54,41 @@
                 <!-- LOGO & BRAND -->
                 <a href="#" class="flex items-center gap-3 select-none hover:opacity-80 transition-opacity" title="Về trang chủ E-Learning">
                     <img src="https://logo.kiotviet.vn/KiotViet-Logo-Horizontal.svg" alt="KiotViet Logo" class="h-7 lg:h-8">
-                    <span class="text-slate-300 font-light text-2xl">|</span>
-                    <span class="font-black bg-gradient-to-r from-sky-600 to-emerald-500 text-gradient tracking-tight text-lg uppercase">E-Learning</span>
                 </a>
                 
                 <!-- Simple Tag -->
                 <div class="hidden md:flex items-center gap-2 px-4 py-1.5 bg-white border border-sky-100 rounded-full text-xs font-bold text-sky-600 shadow-sm">
-                    <i class="fa-solid fa-graduation-cap"></i> Đào tạo Nội bộ 2026
+                    <i class="fa-solid fa-microphone-lines"></i> Open Talk 2026
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-10 flex flex-col lg:flex-row gap-10">
-        <!-- Sidebar TOC -->
-        <aside class="lg:w-1/4 hidden lg:block shrink-0">
-            <div class="sticky top-28 bg-white/80 backdrop-blur-xl p-6 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white">
-                <h3 class="font-black text-slate-800 mb-5 uppercase text-xs tracking-widest flex items-center gap-2 text-slate-400">
-                    <i class="fa-solid fa-list-ul"></i> MỤC LỤC
-                </h3>
-                <nav class="space-y-1.5" id="toc">
-                    <a href="#section-1" class="toc-link block px-4 py-2.5 text-sm font-medium text-slate-500 hover:bg-sky-50 hover:text-sky-600 rounded-xl transition-all border-l-2 border-transparent">1. Khai mạc & Khởi động</a>
-                    <a href="#section-2" class="toc-link block px-4 py-2.5 text-sm font-medium text-slate-500 hover:bg-sky-50 hover:text-sky-600 rounded-xl transition-all border-l-2 border-transparent">2. Pháp lý & 4 Nhóm KH</a>
-                    <a href="#section-3" class="toc-link block px-4 py-2.5 text-sm font-medium text-slate-500 hover:bg-sky-50 hover:text-sky-600 rounded-xl transition-all border-l-2 border-transparent">3. Hệ thống Hướng dẫn</a>
-                    <a href="#section-4" class="toc-link block px-4 py-2.5 text-sm font-medium text-slate-500 hover:bg-sky-50 hover:text-sky-600 rounded-xl transition-all border-l-2 border-transparent">4. Kỹ thuật Bảo mật</a>
-                    <a href="#section-5" class="toc-link block px-4 py-2.5 text-sm font-medium text-slate-500 hover:bg-sky-50 hover:text-sky-600 rounded-xl transition-all border-l-2 border-transparent">5. Phiên Q&A Thực chiến</a>
-                    <a href="#section-6" class="toc-link block px-4 py-2.5 text-sm font-medium text-slate-500 hover:bg-sky-50 hover:text-sky-600 rounded-xl transition-all border-l-2 border-transparent">6. Tổng kết & Tài liệu</a>
-                </nav>
-            </div>
-        </aside>
-
+    <main class="max-w-7xl mx-auto px-4 py-10 flex flex-col gap-10">
         <!-- Content Area -->
-        <article class="lg:w-3/4 w-full space-y-14 pb-16">
+        <article class="w-full max-w-4xl mx-auto space-y-14 pb-16">
             <!-- Article Header (Hero) -->
             <div class="text-center lg:text-left" data-aos="fade-down">
                 <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-sky-100 px-4 py-1.5 rounded-full mb-6 shadow-sm">
                     <span class="flex h-2 w-2 rounded-full bg-sky-500 animate-pulse"></span>
                     <span class="text-xs font-bold uppercase tracking-wider text-sky-700">Cẩm nang Thuế HKD</span>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-black text-slate-800 mb-6 leading-[1.2]">
-                    TIMELINE CHI TIẾT <br>
-                    <span class="bg-gradient-to-r from-sky-500 to-emerald-400 text-gradient">ĐÀO TẠO THUẾ 2026</span>
+                
+                <!-- Redesigned Hero Title -->
+                <h1 class="font-display font-black text-slate-800 mb-8">
+                    <span class="block text-lg md:text-xl text-sky-500 tracking-widest uppercase mb-3 flex items-center justify-center lg:justify-start gap-2">
+                        <i class="fa-solid fa-microphone-lines"></i> Open Talk 2026
+                    </span>
+                    <span class="bg-gradient-to-r from-sky-500 via-blue-600 to-emerald-500 text-gradient text-[2rem] sm:text-5xl md:text-[3.5rem] block leading-[1.3] py-2">
+                        GIẢI ĐÁP CÁC VẤN ĐỀ VỀ THUẾ <br class="hidden md:block">
+                    </span>
+                    <span class="bg-gradient-to-r from-slate-700 to-slate-900 text-gradient text-[1.75rem] sm:text-4xl md:text-5xl block leading-[1.3] py-2 mt-1">
+                        & PHẦN MỀM KIOTVIET 2026
+                    </span>
                 </h1>
                 
                 <!-- Meta Info Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
                     <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-white shadow-sm flex flex-col items-center justify-center text-center">
                         <i class="fa-regular fa-calendar-check text-2xl text-sky-500 mb-2"></i>
                         <span class="text-xs text-slate-400 font-semibold uppercase">Ngày tổ chức</span>
@@ -126,7 +115,7 @@
             <!-- SECTION 1: Timeline -->
             <section id="section-1" class="scroll-mt-32" data-aos="fade-up">
                 <div class="flex items-center gap-4 mb-8">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-400 to-blue-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black">1</div>
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-400 to-blue-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black font-display">1</div>
                     <h2 class="text-3xl font-black text-slate-800 tracking-tight">Khai mạc & Khởi động</h2>
                 </div>
                 
@@ -136,7 +125,7 @@
                         <div class="absolute -left-[51px] top-1/2 -translate-y-1/2 bg-white border-4 border-sky-100 w-10 h-10 rounded-full flex items-center justify-center text-sky-500 shadow-sm z-10"><i class="fa-solid fa-users"></i></div>
                         <div class="bg-white p-6 rounded-3xl border border-white shadow-sm hover:shadow-md transition-all group">
                             <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                                <h3 class="font-bold text-lg text-slate-800 group-hover:text-sky-600 transition-colors">Ổn định tổ chức & Check-in</h3>
+                                <h3 class="font-display font-bold text-lg text-slate-800 group-hover:text-sky-600 transition-colors">Ổn định tổ chức & Check-in</h3>
                                 <span class="bg-sky-50 text-sky-600 font-mono text-sm font-bold px-3 py-1 rounded-lg">14:00 - 14:05</span>
                             </div>
                             <p class="text-slate-600 text-sm mb-4">IT và L&D kiểm tra âm thanh, hình ảnh. Nhắc lại rule: 1 team 1 account Zoom, nghe tập trung.</p>
@@ -149,7 +138,7 @@
                         <div class="absolute -left-[51px] top-1/2 -translate-y-1/2 bg-white border-4 border-sky-100 w-10 h-10 rounded-full flex items-center justify-center text-sky-500 shadow-sm z-10"><i class="fa-solid fa-bullhorn"></i></div>
                         <div class="bg-white p-6 rounded-3xl border border-white shadow-sm hover:shadow-md transition-all group">
                             <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                                <h3 class="font-bold text-lg text-slate-800 group-hover:text-sky-600 transition-colors">Khai mạc chương trình</h3>
+                                <h3 class="font-display font-bold text-lg text-slate-800 group-hover:text-sky-600 transition-colors">Khai mạc chương trình</h3>
                                 <span class="bg-sky-50 text-sky-600 font-mono text-sm font-bold px-3 py-1 rounded-lg">14:05 - 14:15</span>
                             </div>
                             <p class="text-slate-600 text-sm mb-4">Anh Hạo tuyên bố mục tiêu buổi đào tạo. Phổ biến Agenda mới (Tập trung giải quyết bài toán theo 4 nhóm khách hàng trọng điểm).</p>
@@ -167,7 +156,7 @@
             <section id="section-2" class="scroll-mt-32" data-aos="fade-up">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-400 to-purple-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black">2</div>
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-400 to-purple-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black font-display">2</div>
                         <h2 class="text-3xl font-black text-slate-800 tracking-tight">Tổng quan Pháp lý & KH</h2>
                     </div>
                     <div class="inline-flex items-center gap-2 bg-white border border-indigo-100 px-4 py-2 rounded-xl text-sm font-bold text-indigo-600 shadow-sm">
@@ -178,40 +167,40 @@
                 <!-- Intro Block -->
                 <div class="bg-white p-6 md:p-8 rounded-3xl border border-white shadow-sm mb-8 text-slate-700 leading-relaxed text-justify relative overflow-hidden">
                     <div class="absolute -right-10 -top-10 w-40 h-40 bg-sky-50 rounded-full blur-2xl"></div>
-                    <h3 class="text-2xl font-black text-slate-800 mb-4 text-center md:text-left relative z-10">GIẢI PHÁP HĐĐT - THUẾ - KẾ TOÁN (HKD)</h3>
+                    <h3 class="font-display text-2xl font-black text-slate-800 mb-4 text-center md:text-left relative z-10">GIẢI PHÁP HĐĐT - THUẾ - KẾ TOÁN (HKD)</h3>
                     <p class="mb-4 relative z-10">Là Phần mềm Quản lý bán hàng Phổ biến nhất Việt Nam, KiotViet không ngừng nỗ lực cải tiến cả về giải pháp phần mềm lẫn thiết bị phần cứng nhằm giúp Hộ kinh doanh mọi quy mô tối ưu vận hành, quản lý chặt chẽ và thúc đẩy doanh thu đột phá.</p>
                     <p class="font-medium text-sky-800 bg-sky-50/80 p-5 rounded-2xl border border-sky-100 relative z-10 shadow-sm">
-                        Tuy nhiên, hành trình kinh doanh bền vững không chỉ dừng lại ở lợi nhuận. Trước những thay đổi lớn về chính sách thuế, KiotViet đã hoàn thiện hệ sinh thái của mình bằng việc tích hợp trọn bộ giải pháp tuân thủ pháp lý. Bộ giải pháp này <strong class="text-sky-900 underline decoration-sky-400 underline-offset-4 font-black">không phát sinh chi phí</strong>, tạo thành một quy trình đồng bộ, giúp anh/chị an tâm kinh doanh đúng luật mà không cần lo lắng về thủ tục hành chính phức tạp.
+                        Tuy nhiên, hành trình kinh doanh bền vững không chỉ dừng lại ở lợi nhuận. Trước những thay đổi lớn về chính sách thuế, KiotViet đã hoàn thiện hệ sinh thái của mình bằng việc tích hợp trọn bộ giải pháp tuân thủ pháp lý. Bộ giải pháp này <strong class="font-display text-sky-900 underline decoration-sky-400 underline-offset-4 font-black">không phát sinh chi phí</strong>, tạo thành một quy trình đồng bộ, giúp anh/chị an tâm kinh doanh đúng luật mà không cần lo lắng về thủ tục hành chính phức tạp.
                     </p>
                 </div>
 
                 <!-- Part 1: Bối cảnh -->
-                <h4 class="font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-scale-balanced text-sky-500"></i> 1. Bối cảnh pháp lý & Nghĩa vụ HKD 2026</h4>
+                <h4 class="font-display font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-scale-balanced text-sky-500"></i> 1. Bối cảnh pháp lý & Nghĩa vụ HKD 2026</h4>
                 <div class="grid md:grid-cols-2 gap-6 mb-10">
                     <div class="bg-white p-6 rounded-2xl border border-rose-100 shadow-sm">
                         <div class="w-10 h-10 bg-rose-50 text-rose-500 rounded-full flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-ban"></i></div>
-                        <h5 class="font-bold text-slate-800 mb-2">Sự chấm dứt của cơ chế Thuế Khoán</h5>
+                        <h5 class="font-display font-bold text-slate-800 mb-2">Sự chấm dứt của cơ chế Thuế Khoán</h5>
                         <p class="text-sm text-slate-600">Theo Luật Quản lý thuế, hình thức thuế khoán (nộp một mức cố định dựa trên doanh thu ước tính) đã chính thức bị bãi bỏ. Nhà nước chuyển sang quản lý dựa trên số liệu thực tế phát sinh để đảm bảo tính công bằng và minh bạch.</p>
                     </div>
                     <div class="bg-white p-6 rounded-2xl border border-amber-100 shadow-sm">
                         <div class="w-10 h-10 bg-amber-50 text-amber-500 rounded-full flex items-center justify-center text-lg mb-3"><i class="fa-solid fa-file-signature"></i></div>
-                        <h5 class="font-bold text-slate-800 mb-2">Nghĩa vụ Kê khai & Sổ sách bắt buộc</h5>
+                        <h5 class="font-display font-bold text-slate-800 mb-2">Nghĩa vụ Kê khai & Sổ sách bắt buộc</h5>
                         <p class="text-sm text-slate-600">Chuyển sang cơ chế "Tự kê khai - Tự nộp". Bắt buộc duy trì sổ sách kế toán theo Thông tư 152/2025/TT-BTC. Việc không có sổ sách minh bạch sẽ dẫn đến rủi ro bị ấn định thuế với mức phạt cao.</p>
                     </div>
                 </div>
 
                 <!-- Part 2: 4 Nhóm -->
-                <h4 class="font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-users-viewfinder text-indigo-400"></i> 2. Phân loại & Nghĩa vụ 4 Nhóm HKD</h4>
+                <h4 class="font-display font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-users-viewfinder text-indigo-400"></i> 2. Phân loại & Nghĩa vụ 4 Nhóm HKD</h4>
                 <p class="text-sm text-slate-500 mb-4">Căn cứ Thông tư 152/2025/TT-BTC, đối chiếu doanh thu thực tế hàng năm:</p>
                 <div class="overflow-x-auto bg-white rounded-2xl border border-white shadow-sm mb-10">
                     <table class="w-full text-left custom-table min-w-[800px]">
                         <thead>
                             <tr>
-                                <th class="w-1/5">Đặc điểm</th>
-                                <th class="w-1/5 text-emerald-600 bg-emerald-50/50">Nhóm 1</th>
-                                <th class="w-1/5 text-sky-600 bg-sky-50/50">Nhóm 2</th>
-                                <th class="w-1/5 text-indigo-600 bg-indigo-50/50">Nhóm 3</th>
-                                <th class="w-1/5 text-purple-600 bg-purple-50/50">Nhóm 4</th>
+                                <th class="w-1/5 font-display">Đặc điểm</th>
+                                <th class="w-1/5 font-display text-emerald-600 bg-emerald-50/50">Nhóm 1</th>
+                                <th class="w-1/5 font-display text-sky-600 bg-sky-50/50">Nhóm 2</th>
+                                <th class="w-1/5 font-display text-indigo-600 bg-indigo-50/50">Nhóm 3</th>
+                                <th class="w-1/5 font-display text-purple-600 bg-purple-50/50">Nhóm 4</th>
                             </tr>
                         </thead>
                         <tbody class="text-sm text-slate-600">
@@ -232,7 +221,7 @@
                             <tr>
                                 <td class="font-bold text-slate-800">Sổ sách Kế toán</td>
                                 <td>Chỉ cần Sổ S1a (Doanh thu).</td>
-                                <td><span class="font-semibold text-sky-700">Cách 1 (Doanh thu):</span> Sổ S2a.<br><br><span class="font-semibold text-sky-700">Cách 2 (Lợi nhuận):</span> Bộ 4 sổ.</td>
+                                <td><span class="font-semibold text-sky-700">Cách 1 (Doanh thu):</span> Sổ S2a.<br><br><span class="font-semibold text-sky-700">Cách 2 (Lợi nhuận):</span> Bộ 4 sổ chính:<br>S2b, S2c, S2d, S2e.</td>
                                 <td>Bộ 4 sổ chính:<br>S2b, S2c, S2d, S2e.</td>
                                 <td>Bộ 4 sổ chính:<br>S2b, S2c, S2d, S2e.</td>
                             </tr>
@@ -248,30 +237,30 @@
                 </div>
 
                 <!-- Part 3: Giải pháp 0 đồng (Tech Light Background) -->
-                <h4 class="font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-box-open text-emerald-500"></i> 3. Giải pháp toàn diện 0 Đồng từ KiotViet</h4>
+                <h4 class="font-display font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-box-open text-emerald-500"></i> 3. Giải pháp toàn diện 0 Đồng từ KiotViet</h4>
                 <div class="bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 rounded-3xl p-6 md:p-8 text-white mb-10 shadow-lg relative overflow-hidden">
                     <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
                     <p class="text-white mb-6 font-medium relative z-10">Tích hợp sẵn sàng đáp ứng nhu cầu tuân thủ của TẤT CẢ các nhóm (từ 1 đến 4) mà KHÔNG phát sinh chi phí ngoài gói phần mềm quản lý:</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/20 flex items-start gap-3 shadow-sm hover:bg-white/20 transition-colors">
                             <i class="fa-solid fa-receipt text-emerald-300 mt-1 text-lg"></i>
-                            <div><strong class="block text-white text-sm mb-1">Hóa đơn điện tử (MTT)</strong><span class="text-xs text-sky-100">Đáp ứng quy định xuất hóa đơn.</span></div>
+                            <div><strong class="font-display block text-white text-sm mb-1">Hóa đơn điện tử (MTT)</strong><span class="text-xs text-sky-100">Đáp ứng quy định xuất hóa đơn.</span></div>
                         </div>
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/20 flex items-start gap-3 shadow-sm hover:bg-white/20 transition-colors">
                             <i class="fa-solid fa-signature text-blue-200 mt-1 text-lg"></i>
-                            <div><strong class="block text-white text-sm mb-1">Chữ ký số từ xa</strong><span class="text-xs text-sky-100">Xác thực pháp lý không cần USB.</span></div>
+                            <div><strong class="font-display block text-white text-sm mb-1">Chữ ký số từ xa</strong><span class="text-xs text-sky-100">Xác thực pháp lý không cần USB.</span></div>
                         </div>
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/20 flex items-start gap-3 shadow-sm hover:bg-white/20 transition-colors">
                             <i class="fa-solid fa-book text-amber-300 mt-1 text-lg"></i>
-                            <div><strong class="block text-white text-sm mb-1">Sổ sách tự động</strong><span class="text-xs text-sky-100">Ghi chép chuẩn Thông tư 152.</span></div>
+                            <div><strong class="font-display block text-white text-sm mb-1">Sổ sách tự động</strong><span class="text-xs text-sky-100">Ghi chép chuẩn Thông tư 152.</span></div>
                         </div>
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/20 flex items-start gap-3 shadow-sm hover:bg-white/20 transition-colors">
                             <i class="fa-solid fa-file-contract text-purple-200 mt-1 text-lg"></i>
-                            <div><strong class="block text-white text-sm mb-1">Tờ khai thuế tích hợp</strong><span class="text-xs text-sky-100">Báo cáo thuế định kỳ dễ dàng.</span></div>
+                            <div><strong class="font-display block text-white text-sm mb-1">Tờ khai thuế tích hợp</strong><span class="text-xs text-sky-100">Báo cáo thuế định kỳ dễ dàng.</span></div>
                         </div>
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/20 flex items-start gap-3 shadow-sm hover:bg-white/20 transition-colors">
                             <i class="fa-solid fa-file-import text-rose-200 mt-1 text-lg"></i>
-                            <div><strong class="block text-white text-sm mb-1">Quản lý Hóa đơn đầu vào</strong><span class="text-xs text-sky-100">Chứng minh chi phí hợp lý.</span></div>
+                            <div><strong class="font-display block text-white text-sm mb-1">Quản lý Hóa đơn đầu vào</strong><span class="text-xs text-sky-100">Chứng minh chi phí hợp lý.</span></div>
                         </div>
                     </div>
                 </div>
@@ -286,7 +275,7 @@
             <section id="section-3" class="scroll-mt-32" data-aos="fade-up">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black">3</div>
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black font-display">3</div>
                         <div>
                             <h2 class="text-3xl font-black text-slate-800 tracking-tight">Live Demo - Hệ thống Hướng dẫn</h2>
                             <p class="text-sm text-slate-500 mt-1">Chi tiết Thao tác cơ bản & Nâng cao cho 4 nhóm HKD.</p>
@@ -304,7 +293,7 @@
                         <div class="flex items-center gap-4 mb-2 relative z-10">
                             <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl text-amber-300 shrink-0 border border-white/20"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                             <div>
-                                <h3 class="font-black text-xl">Luồng Thiết lập Thuế - Kế toán tối ưu (Easy Legal)</h3>
+                                <h3 class="font-display font-black text-xl">Luồng Thiết lập Thuế - Kế toán tối ưu (Easy Legal)</h3>
                                 <p class="text-sky-100 text-sm">Demo chức năng thiết lập một lần áp dụng cho mọi nhóm HKD.</p>
                             </div>
                         </div>
@@ -314,14 +303,14 @@
                     <div class="bg-white rounded-3xl border border-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden hover:shadow-[0_8px_30px_rgba(16,185,129,0.1)] transition-all">
                         <div class="bg-emerald-50/80 px-6 py-4 border-b border-emerald-100 flex items-center gap-3">
                             <i class="fa-solid fa-coins text-emerald-500 text-2xl"></i>
-                            <h3 class="font-black text-emerald-800 text-lg">PHẦN 1: HƯỚNG DẪN KIOTVIET CHO HKD DƯỚI 500 TRIỆU/NĂM (NHÓM 1)</h3>
+                            <h3 class="font-display font-black text-emerald-800 text-lg">PHẦN 1: HƯỚNG DẪN KIOTVIET CHO HKD DƯỚI 500 TRIỆU/NĂM (NHÓM 1)</h3>
                         </div>
                         <div class="p-6 text-sm text-slate-700">
                             <p class="mb-5 text-justify"><strong class="text-emerald-600"><i class="fa-solid fa-scale-balanced"></i> Đặc điểm pháp lý:</strong> Miễn Thuế GTGT & Thuế TNCN. Bắt buộc lập Sổ theo dõi doanh thu (Mẫu S1a) và nộp Tờ khai thuế định kỳ. Nhóm này <span class="underline decoration-emerald-300 underline-offset-2">không được sử dụng</span> Hóa đơn điện tử.</p>
 
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-emerald-400"></i> Các thao tác cơ bản</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-emerald-400"></i> Các thao tác cơ bản</h4>
                                     <ul class="space-y-3 text-xs text-slate-600">
                                         <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Thiết lập chức năng Thuế - Kế toán:</strong> Cài đặt cấu hình ghi nhận các thông số thuế, kế toán cơ bản ban đầu.</span></li>
                                         <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Sổ Kế Toán (Thông tư 152):</strong> Hướng dẫn hệ thống tự động đồng bộ giao dịch vào Sổ doanh thu (S1a) chuẩn form.</span></li>
@@ -331,7 +320,7 @@
                                 </div>
                                 <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-100 flex flex-col justify-center text-center">
                                     <i class="fa-solid fa-circle-info text-slate-300 text-3xl mb-3"></i>
-                                    <h4 class="font-bold text-slate-600 mb-2 text-xs uppercase tracking-wide">Các tính năng nâng cao</h4>
+                                    <h4 class="font-display font-bold text-slate-600 mb-2 text-xs uppercase tracking-wide">Các tính năng nâng cao</h4>
                                     <p class="text-xs text-slate-500 leading-relaxed">Đối với nhóm Hộ kinh doanh doanh thu dưới 500 triệu, các nghiệp vụ chỉ tập trung ở phần cơ bản. Các tính năng nâng cao về Hóa đơn điện tử không áp dụng.</p>
                                 </div>
                             </div>
@@ -342,14 +331,14 @@
                     <div class="bg-white rounded-3xl border border-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden hover:shadow-[0_8px_30px_rgba(14,165,233,0.1)] transition-all">
                         <div class="bg-sky-50/80 px-6 py-4 border-b border-sky-100 flex items-center gap-3">
                             <i class="fa-solid fa-file-invoice text-sky-500 text-2xl"></i>
-                            <h3 class="font-black text-sky-800 text-lg">PHẦN 2: HƯỚNG DẪN KIOTVIET CHO HKD TỪ 500 TRIỆU ĐẾN DƯỚI 1 TỶ/NĂM (NHÓM 2)</h3>
+                            <h3 class="font-display font-black text-sky-800 text-lg">PHẦN 2: HƯỚNG DẪN KIOTVIET CHO HKD TỪ 500 TRIỆU ĐẾN DƯỚI 1 TỶ/NĂM (NHÓM 2)</h3>
                         </div>
                         <div class="p-6 text-sm text-slate-700">
                             <p class="mb-5 text-justify"><strong class="text-sky-600"><i class="fa-solid fa-scale-balanced"></i> Đặc điểm pháp lý:</strong> Nghĩa vụ "Tự kê khai - Tự nộp". Chọn nộp thuế theo % Doanh thu (Sổ S2a) hoặc 15% Lợi nhuận (Bộ 4 sổ). Hóa đơn điện tử chưa bắt buộc 100%.</p>
 
                             <div class="grid md:grid-cols-3 gap-6 mb-6">
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-sky-400"></i> Thuế - Kế toán</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-sky-400"></i> Thuế - Kế toán</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Cài đặt cấu hình ban đầu.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Tự động hạch toán vào Sổ doanh thu/chi phí.</span></li>
@@ -358,7 +347,7 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-sky-400"></i> Chuẩn bị HĐĐT</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-sky-400"></i> Chuẩn bị HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Đăng ký Chữ ký số IntrustCA.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Bắt đầu dùng & Tổng quan.</span></li>
@@ -368,7 +357,7 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-sky-400"></i> Vận hành HĐĐT</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-sky-400"></i> Vận hành HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Phát hành & Báo cáo thống kê.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Lập hóa đơn điều chỉnh / thay thế.</span></li>
@@ -379,7 +368,7 @@
                             </div>
 
                             <div class="bg-sky-50/50 p-4 rounded-2xl border border-sky-100">
-                                <h4 class="font-bold text-sky-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
+                                <h4 class="font-display font-bold text-sky-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
                                 <div class="flex flex-wrap gap-2 text-xs font-semibold text-sky-700">
                                     <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-sky-100 hover:border-sky-200 transition-colors">Lập HĐ trực tiếp (MTT/Thường)</span>
                                     <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-sky-100 hover:border-sky-200 transition-colors">Quản lý HH/KH trên eInvoice</span>
@@ -393,14 +382,14 @@
                     <div class="bg-white rounded-3xl border border-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden hover:shadow-[0_8px_30px_rgba(79,70,229,0.1)] transition-all">
                         <div class="bg-indigo-50/80 px-6 py-4 border-b border-indigo-100 flex items-center gap-3">
                             <i class="fa-solid fa-laptop-file text-indigo-500 text-2xl"></i>
-                            <h3 class="font-black text-indigo-800 text-lg">PHẦN 3: HƯỚNG DẪN KIOTVIET CHO HKD 1 TỶ ĐẾN DƯỚI 3 TỶ/NĂM (NHÓM 3)</h3>
+                            <h3 class="font-display font-black text-indigo-800 text-lg">PHẦN 3: HƯỚNG DẪN KIOTVIET CHO HKD 1 TỶ ĐẾN DƯỚI 3 TỶ/NĂM (NHÓM 3)</h3>
                         </div>
                         <div class="p-6 text-sm text-slate-700">
                             <p class="mb-5 text-justify"><strong class="text-indigo-600"><i class="fa-solid fa-scale-balanced"></i> Đặc điểm pháp lý:</strong> Có 2 nghĩa vụ BẮT BUỘC: Xuất Hóa đơn điện tử cho 100% giao dịch & Duy trì sổ sách Kế toán. Bộ giải pháp KiotViet liền mạch hóa 2 khâu này trên thu ngân.</p>
 
                             <div class="grid md:grid-cols-3 gap-6 mb-6">
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-indigo-400"></i> Thuế - Kế toán</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-indigo-400"></i> Thuế - Kế toán</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Cài đặt cấu hình ghi nhận.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Tự động ghi doanh thu vào Sổ.</span></li>
@@ -409,7 +398,7 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-indigo-400"></i> Chuẩn bị HĐĐT</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-indigo-400"></i> Chuẩn bị HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Kích hoạt CKS Remote Signing.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Khởi tạo phân hệ & Thiết lập.</span></li>
@@ -419,7 +408,7 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-indigo-400"></i> Vận hành HĐĐT</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-indigo-400"></i> Vận hành HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Quy trình xuất hóa đơn tiêu chuẩn.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Xử lý lỗi hóa đơn (Sửa/Thay).</span></li>
@@ -430,7 +419,7 @@
                             </div>
 
                             <div class="bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100">
-                                <h4 class="font-bold text-indigo-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
+                                <h4 class="font-display font-bold text-indigo-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
                                 <div class="flex flex-wrap gap-2 text-xs font-semibold text-indigo-700">
                                     <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100 hover:border-indigo-200">Lập HĐ trực tiếp (MTT/Thường)</span>
                                     <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100 hover:border-indigo-200">Quản lý HH/KH trên eInvoice</span>
@@ -444,14 +433,14 @@
                     <div class="bg-white rounded-3xl border border-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden hover:shadow-[0_8px_30px_rgba(168,85,247,0.1)] transition-all">
                         <div class="bg-purple-50/80 px-6 py-4 border-b border-purple-100 flex items-center gap-3">
                             <i class="fa-solid fa-book-open text-purple-500 text-2xl"></i>
-                            <h3 class="font-black text-purple-800 text-lg">PHẦN 4: HƯỚNG DẪN KIOTVIET CHO HKD TỪ 3 TỶ TRỞ LÊN (NHÓM 4)</h3>
+                            <h3 class="font-display font-black text-purple-800 text-lg">PHẦN 4: HƯỚNG DẪN KIOTVIET CHO HKD TỪ 3 TỶ TRỞ LÊN (NHÓM 4)</h3>
                         </div>
                         <div class="p-6 text-sm text-slate-700">
                             <p class="mb-5 text-justify"><strong class="text-purple-600"><i class="fa-solid fa-scale-balanced"></i> Đặc điểm pháp lý:</strong> Quy mô hoạt động mạnh mẽ nhất, quy định chặt chẽ. <span class="underline decoration-purple-300 underline-offset-2">Bắt buộc</span> duy trì Bộ 4 sổ kế toán (S2b, S2c, S2d, S2e) tính thuế trên Lợi nhuận và sử dụng HĐĐT 100%. KiotViet tự động hạch toán "kép".</p>
 
                             <div class="grid md:grid-cols-3 gap-6 mb-6">
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-purple-400"></i> Thuế - Kế toán</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-purple-400"></i> Thuế - Kế toán</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Cài đặt cấu hình ban đầu.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Hạch toán Bộ 4 sổ.</span></li>
@@ -460,7 +449,7 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-purple-400"></i> Chuẩn bị HĐĐT</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-purple-400"></i> Chuẩn bị HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Tạo chữ ký số KiotViet IntrustCA.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Kích hoạt tính năng & Cấu hình.</span></li>
@@ -470,7 +459,7 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-purple-400"></i> Vận hành HĐĐT</h4>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-purple-400"></i> Vận hành HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Luồng xuất hóa đơn tiêu chuẩn.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Xử lý sai sót: Sửa/Thay thế.</span></li>
@@ -481,7 +470,7 @@
                             </div>
 
                             <div class="bg-purple-50/50 p-4 rounded-2xl border border-purple-100">
-                                <h4 class="font-bold text-purple-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
+                                <h4 class="font-display font-bold text-purple-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
                                 <div class="flex flex-wrap gap-2 text-xs font-semibold text-purple-700">
                                     <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-purple-100 hover:border-purple-200">Lập HĐ trực tiếp (MTT/Thường)</span>
                                     <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-purple-100 hover:border-purple-200">Quản lý HH/KH trên eInvoice</span>
@@ -508,7 +497,7 @@
                         <div class="inline-flex items-center gap-2 bg-red-900/40 text-rose-100 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-rose-400/30 backdrop-blur-sm">
                             <i class="fa-regular fa-clock"></i> 15:50 - 16:00 (Tea Break)
                         </div>
-                        <h2 class="text-3xl font-black text-white mb-5 tracking-tight">HÀNH ĐỘNG KỸ THUẬT BẮT BUỘC</h2>
+                        <h2 class="font-display text-3xl font-black text-white mb-5 tracking-tight">HÀNH ĐỘNG KỸ THUẬT BẮT BUỘC</h2>
                         
                         <div class="bg-black/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 inline-block text-left w-full max-w-lg shadow-inner">
                             <ul class="space-y-3 text-white font-medium text-sm">
@@ -527,7 +516,7 @@
             <!-- SECTION 5: Q&A -->
             <section id="section-5" class="scroll-mt-32" data-aos="fade-up">
                 <div class="flex items-center gap-4 mb-8">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black">5</div>
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black font-display">5</div>
                     <div>
                         <h2 class="text-3xl font-black text-slate-800 tracking-tight">Q&A Bảo mật & Thực chiến</h2>
                         <div class="inline-flex items-center gap-2 bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-xs font-bold mt-2">
@@ -544,7 +533,7 @@
                             <i class="fa-solid fa-people-group"></i>
                         </div>
                         
-                        <h3 class="font-black text-slate-800 text-2xl mb-4">Chia sẻ Guideline Xử lý Vấn đề (Thực chiến)</h3>
+                        <h3 class="font-display font-black text-slate-800 text-2xl mb-4">Chia sẻ Guideline Xử lý Vấn đề (Thực chiến)</h3>
                         <p class="text-slate-600 max-w-2xl mx-auto mb-8">
                             Phiên thảo luận nội bộ: PM Hoàng Thị Dung và đại diện các team (Pháp chế, CS, Kỹ thuật) sẽ chia sẻ guideline chuyên sâu để xử lý các vấn đề "nóng" đã được nhận định trên thị trường liên quan đến:
                         </p>
@@ -556,7 +545,7 @@
                         </div>
 
                         <div class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 bg-slate-50 px-5 py-2.5 rounded-xl border border-slate-100 shadow-sm">
-                            <i class="fa-solid fa-user-tie text-sky-500 text-lg"></i> Host: PM Hoàng Thị Dung & Panelists
+                            <i class="fa-solid fa-user-tie text-sky-500 text-lg"></i> Host: PM Hoàng Thị Dung & Đại diện các Phòng ban
                         </div>
                     </div>
                 </div>
@@ -573,15 +562,15 @@
                         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 mb-6 shadow-inner">
                             <i class="fa-solid fa-flag-checkered text-3xl text-white drop-shadow-md"></i>
                         </div>
-                        <h2 class="text-3xl md:text-4xl font-black mb-4 leading-tight drop-shadow-sm">Nắm vững 4 nhóm khách hàng<br>là chìa khóa chốt sale 2026!</h2>
+                        <h2 class="font-display text-3xl md:text-4xl font-black mb-4 leading-tight drop-shadow-sm">Nắm vững 4 nhóm khách hàng<br>là chìa khóa chốt sale 2026!</h2>
                         <p class="text-cyan-50 mb-10 max-w-xl mx-auto font-medium">Vui lòng truy cập các tài nguyên đào tạo và hướng dẫn sử dụng dưới đây để chuẩn bị tốt nhất cho các kịch bản tư vấn trên thị trường.</p>
                         
                         <!-- Updated Links Section -->
-                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mx-auto max-w-2xl">
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mx-auto max-w-3xl">
                             <a href="https://www.kiotviet.vn/huong-dan-su-dung-kiotviet/retail-hoa-don-dien-tu" target="_blank" class="w-full sm:w-auto bg-white text-blue-600 hover:text-blue-700 hover:bg-sky-50 px-7 py-4 rounded-full font-black text-sm md:text-base shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(255,255,255,0.4)] flex items-center justify-center gap-2.5">
                                 <i class="fa-solid fa-book-open-reader text-lg"></i> HDSD KiotViet (Thuế HKD)
                             </a>
-                            <a href="https://kiotvietlnd.github.io/elearning/thuehkd/" target="_blank" class="w-full sm:w-auto bg-white/20 backdrop-blur-md text-white border border-white/40 hover:bg-white/30 px-7 py-4 rounded-full font-black text-sm md:text-base shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2.5">
+                            <a href="https://kiotvietlnd.github.io/elearning/thuehkd/" target="_blank" class="w-full sm:w-auto bg-slate-800 text-white hover:bg-slate-900 border border-slate-700 px-7 py-4 rounded-full font-black text-sm md:text-base shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(0,0,0,0.3)] flex items-center justify-center gap-2.5">
                                 <i class="fa-solid fa-laptop-file text-lg"></i> Đào tạo E-Learning Thuế
                             </a>
                         </div>
@@ -610,23 +599,6 @@
     <script>
         // Init Animation
         AOS.init({ once: true, offset: 50, duration: 600 });
-        
-        // ScrollSpy for TOC
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    document.querySelectorAll('.toc-link').forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${id}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        }, { rootMargin: '-20% 0px -60% 0px' });
-        
-        document.querySelectorAll('section').forEach(section => observer.observe(section));
     </script>
 </body>
 </html>
