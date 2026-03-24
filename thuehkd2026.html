@@ -31,11 +31,12 @@
         @keyframes float { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(30px, 50px); } }
         
         /* Gradient Text - Added small padding to prevent accent clipping in Vietnamese */
-        .text-gradient { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; padding-top: 0.25rem; padding-bottom: 0.25rem; }
 
-        /* Custom Table */
-        .custom-table th { background-color: #f8fafc; color: #0f172a; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; padding: 1rem; border-bottom: 2px solid #e2e8f0; }
-        .custom-table td { padding: 1rem; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+        /* Custom Table Optimized for 6 Columns */
+        .custom-table { table-layout: fixed; width: 100%; }
+        .custom-table th { background-color: #f8fafc; color: #0f172a; font-weight: 700; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.02em; padding: 0.75rem 0.5rem; border-bottom: 2px solid #e2e8f0; line-height: 1.4; text-align: left; }
+        .custom-table td { padding: 0.75rem 0.5rem; border-bottom: 1px solid #f1f5f9; vertical-align: top; font-size: 0.75rem; line-height: 1.5; }
         .custom-table tr:hover td { background-color: #f8fafc; }
     </style>
 </head>
@@ -79,10 +80,10 @@
                     <span class="block text-lg md:text-xl text-sky-500 tracking-widest uppercase mb-3 flex items-center justify-center lg:justify-start gap-2">
                         <i class="fa-solid fa-microphone-lines"></i> Open Talk 2026
                     </span>
-                    <span class="bg-gradient-to-r from-sky-500 via-blue-600 to-emerald-500 text-gradient text-[2rem] sm:text-5xl md:text-[3.5rem] block leading-[1.3] py-2">
-                        GIẢI ĐÁP CÁC VẤN ĐỀ VỀ THUẾ <br class="hidden md:block">
+                    <span class="bg-gradient-to-r from-sky-500 via-blue-600 to-emerald-500 text-gradient text-[1.75rem] sm:text-4xl md:text-5xl block leading-[1.3]">
+                        GIẢI ĐÁP CÁC VẤN ĐỀ VỀ THUẾ
                     </span>
-                    <span class="bg-gradient-to-r from-slate-700 to-slate-900 text-gradient text-[1.75rem] sm:text-4xl md:text-5xl block leading-[1.3] py-2 mt-1">
+                    <span class="bg-gradient-to-r from-slate-700 to-slate-900 text-gradient text-[1.5rem] sm:text-3xl md:text-4xl block leading-[1.3] mt-1">
                         & PHẦN MỀM KIOTVIET 2026
                     </span>
                 </h1>
@@ -107,7 +108,7 @@
                     <div class="bg-white/90 backdrop-blur-sm p-4 rounded-2xl border border-white shadow-sm flex flex-col items-center justify-center text-center">
                         <i class="fa-solid fa-users text-2xl text-purple-500 mb-2"></i>
                         <span class="text-xs text-slate-400 font-semibold uppercase">Đối tượng</span>
-                        <span class="text-sm font-bold text-slate-700 mt-1">4 Nhóm HKD</span>
+                        <span class="text-sm font-bold text-slate-700 mt-1">5 Nhóm HKD</span>
                     </div>
                 </div>
             </div>
@@ -126,7 +127,7 @@
                         <div class="bg-white p-6 rounded-3xl border border-white shadow-sm hover:shadow-md transition-all group">
                             <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                                 <h3 class="font-display font-bold text-lg text-slate-800 group-hover:text-sky-600 transition-colors">Ổn định tổ chức & Check-in</h3>
-                                <span class="bg-sky-50 text-sky-600 font-mono text-sm font-bold px-3 py-1 rounded-lg">14:00 - 14:05</span>
+                                <span class="bg-sky-50 text-sky-600 font-mono text-sm font-bold px-3 py-1 rounded-lg">14:00 - 14:15</span>
                             </div>
                             <p class="text-slate-600 text-sm mb-4">IT và L&D kiểm tra âm thanh, hình ảnh. Nhắc lại rule: 1 team 1 account Zoom, nghe tập trung.</p>
                             <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-600"><i class="fa-solid fa-user-tag text-slate-400"></i> PIC: L&D, IT</div>
@@ -139,9 +140,9 @@
                         <div class="bg-white p-6 rounded-3xl border border-white shadow-sm hover:shadow-md transition-all group">
                             <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                                 <h3 class="font-display font-bold text-lg text-slate-800 group-hover:text-sky-600 transition-colors">Khai mạc chương trình</h3>
-                                <span class="bg-sky-50 text-sky-600 font-mono text-sm font-bold px-3 py-1 rounded-lg">14:05 - 14:15</span>
+                                <span class="bg-sky-50 text-sky-600 font-mono text-sm font-bold px-3 py-1 rounded-lg">14:15 - 14:25</span>
                             </div>
-                            <p class="text-slate-600 text-sm mb-4">Anh Hạo tuyên bố mục tiêu buổi đào tạo. Phổ biến Agenda mới (Tập trung giải quyết bài toán theo 4 nhóm khách hàng trọng điểm).</p>
+                            <p class="text-slate-600 text-sm mb-4">Anh Hạo tuyên bố mục tiêu buổi đào tạo. Phổ biến Agenda mới (Tập trung giải quyết bài toán theo 5 nhóm khách hàng trọng điểm).</p>
                             
                             <div class="flex flex-wrap items-center gap-3">
                                 <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-bold bg-slate-100 text-slate-600"><i class="fa-solid fa-user-tag text-slate-400"></i> PIC: Host</div>
@@ -152,12 +153,12 @@
                 </div>
             </section>
 
-            <!-- SECTION 2: Trình bày chi tiết -->
+            <!-- SECTION 2: Trình bày chi tiết CEO -->
             <section id="section-2" class="scroll-mt-32" data-aos="fade-up">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-400 to-purple-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black font-display">2</div>
-                        <h2 class="text-3xl font-black text-slate-800 tracking-tight">Tổng quan Pháp lý & KH</h2>
+                        <h2 class="text-3xl font-black text-slate-800 tracking-tight">Tổng quan Pháp lý HKD</h2>
                     </div>
                     <div class="inline-flex items-center gap-2 bg-white border border-indigo-100 px-4 py-2 rounded-xl text-sm font-bold text-indigo-600 shadow-sm">
                         <i class="fa-solid fa-microphone-lines text-indigo-400"></i> CEO Trần Nguyên Hạo
@@ -189,58 +190,11 @@
                     </div>
                 </div>
 
-                <!-- Part 2: 4 Nhóm -->
-                <h4 class="font-display font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-users-viewfinder text-indigo-400"></i> 2. Phân loại & Nghĩa vụ 4 Nhóm HKD</h4>
-                <p class="text-sm text-slate-500 mb-4">Căn cứ Thông tư 152/2025/TT-BTC, đối chiếu doanh thu thực tế hàng năm:</p>
-                <div class="overflow-x-auto bg-white rounded-2xl border border-white shadow-sm mb-10">
-                    <table class="w-full text-left custom-table min-w-[800px]">
-                        <thead>
-                            <tr>
-                                <th class="w-1/5 font-display">Đặc điểm</th>
-                                <th class="w-1/5 font-display text-emerald-600 bg-emerald-50/50">Nhóm 1</th>
-                                <th class="w-1/5 font-display text-sky-600 bg-sky-50/50">Nhóm 2</th>
-                                <th class="w-1/5 font-display text-indigo-600 bg-indigo-50/50">Nhóm 3</th>
-                                <th class="w-1/5 font-display text-purple-600 bg-purple-50/50">Nhóm 4</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-sm text-slate-600">
-                            <tr>
-                                <td class="font-bold text-slate-800">Doanh thu/năm</td>
-                                <td>Dưới 500 triệu</td>
-                                <td>500 triệu - Dưới 3 tỷ</td>
-                                <td>3 tỷ - Dưới 50 tỷ</td>
-                                <td>Trên 50 tỷ</td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold text-slate-800">Nghĩa vụ Thuế</td>
-                                <td>Miễn Thuế GTGT & TNCN.</td>
-                                <td><span class="font-semibold text-sky-700">Tùy chọn:</span><br>1. Tỷ lệ % Doanh thu.<br>2. 15% trên Lợi nhuận.</td>
-                                <td>17% trên Lợi nhuận</td>
-                                <td>20% trên Lợi nhuận</td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold text-slate-800">Sổ sách Kế toán</td>
-                                <td>Chỉ cần Sổ S1a (Doanh thu).</td>
-                                <td><span class="font-semibold text-sky-700">Cách 1 (Doanh thu):</span> Sổ S2a.<br><br><span class="font-semibold text-sky-700">Cách 2 (Lợi nhuận):</span> Bộ 4 sổ chính:<br>S2b, S2c, S2d, S2e.</td>
-                                <td>Bộ 4 sổ chính:<br>S2b, S2c, S2d, S2e.</td>
-                                <td>Bộ 4 sổ chính:<br>S2b, S2c, S2d, S2e.</td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold text-slate-800">Hóa đơn điện tử</td>
-                                <td>Không bắt buộc.</td>
-                                <td>Bắt buộc (Nếu > 1 tỷ).</td>
-                                <td>Bắt buộc.</td>
-                                <td>Bắt buộc.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Part 3: Giải pháp 0 đồng (Tech Light Background) -->
-                <h4 class="font-display font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-box-open text-emerald-500"></i> 3. Giải pháp toàn diện 0 Đồng từ KiotViet</h4>
-                <div class="bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 rounded-3xl p-6 md:p-8 text-white mb-10 shadow-lg relative overflow-hidden">
+                <!-- Part 2: Giải pháp 0 đồng (Tech Light Background) -->
+                <h4 class="font-display font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-box-open text-emerald-500"></i> 2. Giải pháp toàn diện 0 Đồng từ KiotViet</h4>
+                <div class="bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 rounded-3xl p-6 md:p-8 text-white shadow-lg relative overflow-hidden">
                     <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-                    <p class="text-white mb-6 font-medium relative z-10">Tích hợp sẵn sàng đáp ứng nhu cầu tuân thủ của TẤT CẢ các nhóm (từ 1 đến 4) mà KHÔNG phát sinh chi phí ngoài gói phần mềm quản lý:</p>
+                    <p class="text-white mb-6 font-medium relative z-10">Tích hợp sẵn sàng đáp ứng nhu cầu tuân thủ của TẤT CẢ các nhóm HKD mà KHÔNG phát sinh chi phí ngoài gói phần mềm quản lý:</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
                         <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-md border border-white/20 flex items-start gap-3 shadow-sm hover:bg-white/20 transition-colors">
                             <i class="fa-solid fa-receipt text-emerald-300 mt-1 text-lg"></i>
@@ -264,11 +218,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Lời kết -->
-                <div class="text-center italic text-slate-500 pt-2 max-w-2xl mx-auto">
-                    "Hãy để KiotViet gánh vác những lo toan về thủ tục, để anh/chị toàn tâm toàn ý cho mục tiêu quan trọng nhất: <strong class="text-sky-600">Phát triển kinh doanh thịnh vượng.</strong>"
-                </div>
             </section>
 
             <!-- SECTION 3: Demo Solutions & Articles -->
@@ -278,50 +227,123 @@
                         <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 text-white flex items-center justify-center text-xl shadow-lg shrink-0 font-black font-display">3</div>
                         <div>
                             <h2 class="text-3xl font-black text-slate-800 tracking-tight">Live Demo - Hệ thống Hướng dẫn</h2>
-                            <p class="text-sm text-slate-500 mt-1">Chi tiết Thao tác cơ bản & Nâng cao cho 4 nhóm HKD.</p>
+                            <p class="text-sm text-slate-500 mt-1">Phân loại & Thao tác chi tiết cho 5 nhóm HKD.</p>
                         </div>
                     </div>
                     <div class="inline-flex items-center gap-2 bg-white border border-emerald-100 px-4 py-2 rounded-xl text-sm font-bold text-emerald-600 shadow-sm">
                         <i class="fa-solid fa-microphone-lines text-emerald-400"></i> PM Hoàng Thị Dung
                     </div>
                 </div>
-                
-                <div class="grid gap-8">
-                    <!-- Easy Legal -->
-                    <div class="bg-gradient-to-r from-sky-500 to-indigo-500 p-6 rounded-3xl shadow-lg text-white mb-2 relative overflow-hidden">
-                        <div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-white/10 to-transparent"></div>
-                        <div class="flex items-center gap-4 mb-2 relative z-10">
-                            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-2xl text-amber-300 shrink-0 border border-white/20"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                            <div>
-                                <h3 class="font-display font-black text-xl">Luồng Thiết lập Thuế - Kế toán tối ưu (Easy Legal)</h3>
-                                <p class="text-sky-100 text-sm">Demo chức năng thiết lập một lần áp dụng cho mọi nhóm HKD.</p>
-                            </div>
+
+                <!-- Part 1: Bảng 5 Nhóm HKD -->
+                <h4 class="font-display font-black text-xl text-slate-800 mb-4 flex items-center gap-2"><i class="fa-solid fa-users-viewfinder text-indigo-400"></i> 1. Phân loại & Nghĩa vụ 5 Nhóm HKD</h4>
+                <div class="bg-white rounded-2xl border border-white shadow-sm mb-10 overflow-x-auto">
+                    <table class="custom-table min-w-[700px]">
+                        <thead>
+                            <tr>
+                                <th class="w-[12%] font-display">Tiêu chí</th>
+                                <th class="w-[17%] font-display text-emerald-600 bg-emerald-50/80">Nhóm 1<br><span class="text-[10px] font-normal text-emerald-500">(&lt;= 500tr)</span></th>
+                                <th class="w-[17%] font-display text-sky-600 bg-sky-50/80">Nhóm 2<br><span class="text-[10px] font-normal text-sky-500">(500tr - 1 tỷ)</span></th>
+                                <th class="w-[17%] font-display text-indigo-600 bg-indigo-50/80">Nhóm 3<br><span class="text-[10px] font-normal text-indigo-500">(1 tỷ - 3 tỷ)</span></th>
+                                <th class="w-[17%] font-display text-purple-600 bg-purple-50/80">Nhóm 4<br><span class="text-[10px] font-normal text-purple-500">(3 tỷ - 50 tỷ)</span></th>
+                                <th class="w-[20%] font-display text-rose-600 bg-rose-50/80">Nhóm 5<br><span class="text-[10px] font-normal text-rose-500">(&gt; 50 tỷ)</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-600">
+                            <tr>
+                                <td class="font-bold text-slate-800 border-r border-slate-100">Thuế GTGT</td>
+                                <td>Không phải nộp<br><span class="italic text-slate-400 text-[10px]">(Miễn thuế)</span></td>
+                                <td>Nộp theo Tỷ lệ % x Doanh thu</td>
+                                <td>Nộp theo Tỷ lệ % x Doanh thu</td>
+                                <td>Nộp theo Tỷ lệ % x Doanh thu</td>
+                                <td>Nộp theo Tỷ lệ % x Doanh thu</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-slate-800 border-r border-slate-100">Thuế TNCN</td>
+                                <td>Không phải nộp<br><span class="italic text-slate-400 text-[10px]">(Miễn thuế)</span></td>
+                                <td><span class="font-semibold text-sky-700">Chọn 1 trong 2:</span><br>1. Tính theo % x (DT - 500tr)<br>2. Thu nhập tính thuế x 15%</td>
+                                <td><span class="font-semibold text-indigo-700">Chọn 1 trong 2:</span><br>1. Tính theo % x (DT - 500tr)<br>2. Thu nhập tính thuế x 15%</td>
+                                <td><span class="font-semibold text-purple-700">Bắt buộc tính theo:</span><br>Thu nhập tính thuế x 17%</td>
+                                <td><span class="font-semibold text-rose-700">Bắt buộc tính theo:</span><br>Thu nhập tính thuế x 20%</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-slate-800 border-r border-slate-100">Mẫu Sổ kế toán</td>
+                                <td>S1a-HKD<br>(Sổ doanh thu)</td>
+                                <td><span class="font-semibold text-sky-700">Tùy phương pháp:</span><br>- % DT: Sổ S2a-HKD<br>- Lợi nhuận: Bộ 4 sổ (S2b, S2c, S2d, S2e)</td>
+                                <td><span class="font-semibold text-indigo-700">Tùy phương pháp:</span><br>- % DT: Sổ S2a-HKD<br>- Lợi nhuận: Bộ 4 sổ (S2b, S2c, S2d, S2e)</td>
+                                <td><span class="font-semibold text-purple-700">Bắt buộc dùng Bộ 4 sổ:</span><br>(S2b, S2c, S2d, S2e)</td>
+                                <td><span class="font-semibold text-rose-700">Bắt buộc dùng Bộ 4 sổ:</span><br>(S2b, S2c, S2d, S2e)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-slate-800 border-r border-slate-100">Mẫu Tờ khai thuế</td>
+                                <td>Mẫu 01/TKN-CNKD Khai 1 lần/năm (31/01 sau).<br><span class="italic text-emerald-600 text-[10px]">Riêng 2026: 2 lần/năm</span></td>
+                                <td>Mẫu 01/CNKD (Quý).<br>Khai thêm Quyết toán 02/CNKD nếu nộp theo LN</td>
+                                <td>Mẫu 01/CNKD (Quý).<br>Khai thêm Quyết toán 02/CNKD nếu nộp theo LN</td>
+                                <td>Mẫu 01/CNKD (Quý)<br>và Quyết toán 02/CNKD (Năm)</td>
+                                <td>Mẫu 01/CNKD <strong class="text-rose-600">(Tháng)</strong><br>và Quyết toán 02/CNKD (Năm)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-slate-800 border-r border-slate-100">Hóa đơn điện tử</td>
+                                <td>Không được sử dụng</td>
+                                <td>Không bắt buộc sử dụng HĐĐT</td>
+                                <td>Bắt buộc sử dụng HĐĐT</td>
+                                <td>Bắt buộc sử dụng HĐĐT</td>
+                                <td>Bắt buộc sử dụng HĐĐT</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-slate-800 border-r border-slate-100">Hóa đơn đầu vào</td>
+                                <td>CQT không cấp TK tra cứu khi không sử dụng HĐĐT.</td>
+                                <td>CQT không cấp TK tra cứu khi không sử dụng HĐĐT.</td>
+                                <td>CQT cấp TK tra cứu khi đăng ký sử dụng HĐĐT.</td>
+                                <td>CQT cấp TK tra cứu khi đăng ký sử dụng HĐĐT.</td>
+                                <td>CQT cấp TK tra cứu khi đăng ký sử dụng HĐĐT.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Part 2: Easy Legal -->
+                <div class="bg-gradient-to-r from-sky-500 to-indigo-500 p-8 rounded-3xl shadow-lg text-white mb-8 relative overflow-hidden">
+                    <div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-white/10 to-transparent"></div>
+                    <div class="flex flex-col md:flex-row items-start gap-6 relative z-10">
+                        <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-3xl text-amber-300 shrink-0 border border-white/20 shadow-inner"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div>
+                            <h3 class="font-display font-black text-2xl mb-2">2. Luồng Thiết lập Thuế - Kế toán tối ưu (Easy Legal)</h3>
+                            <p class="text-sky-100 text-sm mb-4 italic">Demo trực tiếp chức năng thiết lập một lần áp dụng chuẩn xác cho mọi nhóm HKD.</p>
+                            <ul class="space-y-3 text-sm text-white/90">
+                                <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-emerald-300 mt-0.5"></i> <span class="flex-1">Phân loại nghĩa vụ thuế của từng nhóm theo đúng văn bản pháp luật.</span></li>
+                                <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-emerald-300 mt-0.5"></i> <span class="flex-1">Tự động xác định các nghĩa vụ, sổ sách cần tuân thủ liên quan đến Sổ kế toán, HĐĐT, Tờ khai thuế.</span></li>
+                                <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-emerald-300 mt-0.5"></i> <span class="flex-1">Đảm bảo tính chính xác, hướng dẫn khách hàng thiết lập thuế theo hàng hóa đúng ngay từ đầu trước khi phát hành HĐĐT, đồng bộ Sổ kế toán, Tờ khai thuế.</span></li>
+                                <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-emerald-300 mt-0.5"></i> <span class="flex-1">Số liệu Sổ kế toán được đồng bộ chính xác từ Hàng hóa có thiết lập thuế chi tiết trên KVS và Hóa đơn phát hành bổ sung từ KVE (bao gồm cả điều chỉnh, thay thế).</span></li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
+                <div class="grid gap-8">
                     <!-- PHẦN 1: Nhóm 1 -->
                     <div class="bg-white rounded-3xl border border-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden hover:shadow-[0_8px_30px_rgba(16,185,129,0.1)] transition-all">
                         <div class="bg-emerald-50/80 px-6 py-4 border-b border-emerald-100 flex items-center gap-3">
                             <i class="fa-solid fa-coins text-emerald-500 text-2xl"></i>
-                            <h3 class="font-display font-black text-emerald-800 text-lg">PHẦN 1: HƯỚNG DẪN KIOTVIET CHO HKD DƯỚI 500 TRIỆU/NĂM (NHÓM 1)</h3>
+                            <h3 class="font-display font-black text-emerald-800 text-lg">PHẦN 1: HƯỚNG DẪN KIOTVIET CHO HKD NHÓM 1 (&lt;= 500 TR)</h3>
                         </div>
                         <div class="p-6 text-sm text-slate-700">
-                            <p class="mb-5 text-justify"><strong class="text-emerald-600"><i class="fa-solid fa-scale-balanced"></i> Đặc điểm pháp lý:</strong> Miễn Thuế GTGT & Thuế TNCN. Bắt buộc lập Sổ theo dõi doanh thu (Mẫu S1a) và nộp Tờ khai thuế định kỳ. Nhóm này <span class="underline decoration-emerald-300 underline-offset-2">không được sử dụng</span> Hóa đơn điện tử.</p>
+                            <p class="mb-5 text-justify"><strong class="text-emerald-600"><i class="fa-solid fa-scale-balanced"></i> Đặc điểm pháp lý:</strong> Miễn Thuế GTGT & Thuế TNCN. Bắt buộc lập Sổ doanh thu (S1a) và nộp Mẫu 01/TKN-CNKD Khai 1 lần/năm (riêng 2026: 2 lần/năm). <span class="font-bold underline decoration-emerald-300 underline-offset-2 text-rose-500">Không được sử dụng</span> Hóa đơn điện tử và không được cấp tài khoản tra cứu HĐ đầu vào.</p>
 
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-emerald-400"></i> Các thao tác cơ bản</h4>
                                     <ul class="space-y-3 text-xs text-slate-600">
-                                        <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Thiết lập chức năng Thuế - Kế toán:</strong> Cài đặt cấu hình ghi nhận các thông số thuế, kế toán cơ bản ban đầu.</span></li>
-                                        <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Sổ Kế Toán (Thông tư 152):</strong> Hướng dẫn hệ thống tự động đồng bộ giao dịch vào Sổ doanh thu (S1a) chuẩn form.</span></li>
-                                        <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Tờ khai thuế:</strong> Thao tác kiểm tra số liệu và xuất tờ khai định kỳ để nộp.</span></li>
-                                        <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Hóa đơn đầu vào:</strong> Hướng dẫn quản lý và lưu trữ hóa đơn chứng từ mua hàng hóa, dịch vụ.</span></li>
+                                        <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Thiết lập chức năng Thuế - Kế toán:</strong> Cài đặt cấu hình ghi nhận các thông số cơ bản.</span></li>
+                                        <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Sổ Kế Toán (S1a-HKD):</strong> Hệ thống tự động đồng bộ giao dịch vào Sổ doanh thu.</span></li>
+                                        <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Tờ khai thuế (Mẫu 01/TKN-CNKD):</strong> Trích xuất định kỳ 1 lần/năm.</span></li>
+                                        <li class="flex gap-2.5 items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 text-sm"></i> <span><strong class="text-slate-800">Hóa đơn đầu vào:</strong> Chỉ quản lý lưu trữ nội bộ vì không có tài khoản tra cứu CQT.</span></li>
                                     </ul>
                                 </div>
                                 <div class="bg-slate-50/80 p-5 rounded-2xl border border-slate-100 flex flex-col justify-center text-center">
                                     <i class="fa-solid fa-circle-info text-slate-300 text-3xl mb-3"></i>
                                     <h4 class="font-display font-bold text-slate-600 mb-2 text-xs uppercase tracking-wide">Các tính năng nâng cao</h4>
-                                    <p class="text-xs text-slate-500 leading-relaxed">Đối với nhóm Hộ kinh doanh doanh thu dưới 500 triệu, các nghiệp vụ chỉ tập trung ở phần cơ bản. Các tính năng nâng cao về Hóa đơn điện tử không áp dụng.</p>
+                                    <p class="text-xs text-slate-500 leading-relaxed">Nhóm 1 chỉ tập trung ở phần cơ bản. Các tính năng nâng cao về Hóa đơn điện tử không áp dụng cho nhóm này.</p>
                                 </div>
                             </div>
                         </div>
@@ -331,38 +353,37 @@
                     <div class="bg-white rounded-3xl border border-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden hover:shadow-[0_8px_30px_rgba(14,165,233,0.1)] transition-all">
                         <div class="bg-sky-50/80 px-6 py-4 border-b border-sky-100 flex items-center gap-3">
                             <i class="fa-solid fa-file-invoice text-sky-500 text-2xl"></i>
-                            <h3 class="font-display font-black text-sky-800 text-lg">PHẦN 2: HƯỚNG DẪN KIOTVIET CHO HKD TỪ 500 TRIỆU ĐẾN DƯỚI 1 TỶ/NĂM (NHÓM 2)</h3>
+                            <h3 class="font-display font-black text-sky-800 text-lg">PHẦN 2: HƯỚNG DẪN KIOTVIET CHO HKD NHÓM 2 (500 TR - 1 TỶ)</h3>
                         </div>
                         <div class="p-6 text-sm text-slate-700">
-                            <p class="mb-5 text-justify"><strong class="text-sky-600"><i class="fa-solid fa-scale-balanced"></i> Đặc điểm pháp lý:</strong> Nghĩa vụ "Tự kê khai - Tự nộp". Chọn nộp thuế theo % Doanh thu (Sổ S2a) hoặc 15% Lợi nhuận (Bộ 4 sổ). Hóa đơn điện tử chưa bắt buộc 100%.</p>
-
                             <div class="grid md:grid-cols-3 gap-6 mb-6">
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-sky-400"></i> Thuế - Kế toán</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Cài đặt cấu hình ban đầu.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Tự động hạch toán vào Sổ doanh thu/chi phí.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">Tờ khai:</strong> Trích xuất & tạo định kỳ.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">Đầu vào:</strong> Quản lý đối soát mua.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Kích hoạt Thuế - Kế toán.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Quản lý Sổ S2a hoặc Bộ 4 sổ.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">Tờ khai:</strong> Mẫu 01/CNKD (Quý) & Quyết toán năm (nếu có).</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span><strong class="text-slate-800">HĐ Đầu vào:</strong> Hỗ trợ kết nối CQT đồng bộ quản lý.</span></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-sky-400"></i> Chuẩn bị HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Đăng ký Chữ ký số IntrustCA.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Bắt đầu dùng & Tổng quan.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Kích hoạt hệ thống KVE.</span></li>
                                         <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Thiết lập Chữ ký số.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Lập Tờ khai & Thiết lập mẫu.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Kết nối QLBH và thiết lập.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Lập Tờ khai sử dụng HĐĐT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Thiết lập mẫu HĐĐT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Kết nối hệ thống KVS (QLBH) và KVE.</span></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-sky-400"></i> Vận hành HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Phát hành & Báo cáo thống kê.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Lập hóa đơn điều chỉnh / thay thế.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Gửi Thông báo sai sót.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Quản lý các bảng kê hóa đơn.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Phát hành HĐĐT từ Máy tính tiền.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Gửi Hóa đơn điện tử cho CQT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Xử lý hóa đơn sai sót.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-sky-400 mt-0.5"></i> <span>Báo cáo, bảng kê sử dụng HĐĐT.</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -370,9 +391,9 @@
                             <div class="bg-sky-50/50 p-4 rounded-2xl border border-sky-100">
                                 <h4 class="font-display font-bold text-sky-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
                                 <div class="flex flex-wrap gap-2 text-xs font-semibold text-sky-700">
-                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-sky-100 hover:border-sky-200 transition-colors">Lập HĐ trực tiếp (MTT/Thường)</span>
-                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-sky-100 hover:border-sky-200 transition-colors">Quản lý HH/KH trên eInvoice</span>
-                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-sky-100 hover:border-sky-200 transition-colors">Chứng từ khấu trừ Thuế TNCN</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-sky-100 hover:border-sky-200 transition-colors">Lập HĐĐT trực tiếp từ KVE (không qua KVS)</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-sky-100 hover:border-sky-200 transition-colors">Quản lý Hàng hóa, khách hàng trên KVE</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-sky-100 hover:border-sky-200 transition-colors">Quản lý Chứng từ khấu trừ Thuế TNCN</span>
                                 </div>
                             </div>
                         </div>
@@ -382,38 +403,37 @@
                     <div class="bg-white rounded-3xl border border-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden hover:shadow-[0_8px_30px_rgba(79,70,229,0.1)] transition-all">
                         <div class="bg-indigo-50/80 px-6 py-4 border-b border-indigo-100 flex items-center gap-3">
                             <i class="fa-solid fa-laptop-file text-indigo-500 text-2xl"></i>
-                            <h3 class="font-display font-black text-indigo-800 text-lg">PHẦN 3: HƯỚNG DẪN KIOTVIET CHO HKD 1 TỶ ĐẾN DƯỚI 3 TỶ/NĂM (NHÓM 3)</h3>
+                            <h3 class="font-display font-black text-indigo-800 text-lg">PHẦN 3: HƯỚNG DẪN KIOTVIET CHO HKD NHÓM 3 (1 TỶ - 3 TỶ)</h3>
                         </div>
                         <div class="p-6 text-sm text-slate-700">
-                            <p class="mb-5 text-justify"><strong class="text-indigo-600"><i class="fa-solid fa-scale-balanced"></i> Đặc điểm pháp lý:</strong> Có 2 nghĩa vụ BẮT BUỘC: Xuất Hóa đơn điện tử cho 100% giao dịch & Duy trì sổ sách Kế toán. Bộ giải pháp KiotViet liền mạch hóa 2 khâu này trên thu ngân.</p>
-
                             <div class="grid md:grid-cols-3 gap-6 mb-6">
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-indigo-400"></i> Thuế - Kế toán</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Cài đặt cấu hình ghi nhận.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Tự động ghi doanh thu vào Sổ.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">Tờ khai:</strong> Xuất dữ liệu báo cáo hàng kỳ.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">Đầu vào:</strong> Kết nối tải hóa đơn NCC.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Kích hoạt Thuế - Kế toán.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Quản lý Sổ S2a hoặc Bộ 4 sổ.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">Tờ khai:</strong> Mẫu 01/CNKD (Quý) & Quyết toán năm (nếu có).</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span><strong class="text-slate-800">HĐ Đầu vào:</strong> Hỗ trợ kết nối CQT đồng bộ quản lý.</span></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-indigo-400"></i> Chuẩn bị HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Kích hoạt CKS Remote Signing.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Khởi tạo phân hệ & Thiết lập.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Gửi hồ sơ Tờ khai đăng ký.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Chọn mẫu hiển thị & Kết nối.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Đảm bảo luồng đẩy sang HĐĐT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Đăng ký Chữ ký số IntrustCA.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Kích hoạt hệ thống KVE.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Thiết lập Chữ ký số.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Lập Tờ khai sử dụng HĐĐT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Thiết lập mẫu HĐĐT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Kết nối hệ thống KVS (QLBH) và KVE.</span></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-indigo-400"></i> Vận hành HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Quy trình xuất hóa đơn tiêu chuẩn.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Xử lý lỗi hóa đơn (Sửa/Thay).</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Gửi báo cáo lỗi với CQT.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Lưu trữ Bảng kê và lịch sử.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Phát hành HĐĐT từ Máy tính tiền.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Gửi Hóa đơn điện tử cho CQT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Xử lý hóa đơn sai sót.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-indigo-400 mt-0.5"></i> <span>Báo cáo, bảng kê sử dụng HĐĐT.</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -421,9 +441,9 @@
                             <div class="bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100">
                                 <h4 class="font-display font-bold text-indigo-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
                                 <div class="flex flex-wrap gap-2 text-xs font-semibold text-indigo-700">
-                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100 hover:border-indigo-200">Lập HĐ trực tiếp (MTT/Thường)</span>
-                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100 hover:border-indigo-200">Quản lý HH/KH trên eInvoice</span>
-                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100 hover:border-indigo-200">ĐK Chứng từ điện tử</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100 hover:border-indigo-200 transition-colors">Lập HĐĐT trực tiếp từ KVE (không qua KVS)</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100 hover:border-indigo-200 transition-colors">Quản lý Hàng hóa, khách hàng trên KVE</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-indigo-100 hover:border-indigo-200 transition-colors">Quản lý Chứng từ điện tử</span>
                                 </div>
                             </div>
                         </div>
@@ -433,38 +453,37 @@
                     <div class="bg-white rounded-3xl border border-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden hover:shadow-[0_8px_30px_rgba(168,85,247,0.1)] transition-all">
                         <div class="bg-purple-50/80 px-6 py-4 border-b border-purple-100 flex items-center gap-3">
                             <i class="fa-solid fa-book-open text-purple-500 text-2xl"></i>
-                            <h3 class="font-display font-black text-purple-800 text-lg">PHẦN 4: HƯỚNG DẪN KIOTVIET CHO HKD TỪ 3 TỶ TRỞ LÊN (NHÓM 4)</h3>
+                            <h3 class="font-display font-black text-purple-800 text-lg">PHẦN 4: HƯỚNG DẪN KIOTVIET CHO HKD NHÓM 4 (3 TỶ - 50 TỶ)</h3>
                         </div>
                         <div class="p-6 text-sm text-slate-700">
-                            <p class="mb-5 text-justify"><strong class="text-purple-600"><i class="fa-solid fa-scale-balanced"></i> Đặc điểm pháp lý:</strong> Quy mô hoạt động mạnh mẽ nhất, quy định chặt chẽ. <span class="underline decoration-purple-300 underline-offset-2">Bắt buộc</span> duy trì Bộ 4 sổ kế toán (S2b, S2c, S2d, S2e) tính thuế trên Lợi nhuận và sử dụng HĐĐT 100%. KiotViet tự động hạch toán "kép".</p>
-
                             <div class="grid md:grid-cols-3 gap-6 mb-6">
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-purple-400"></i> Thuế - Kế toán</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Cài đặt cấu hình ban đầu.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Hạch toán Bộ 4 sổ.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">Tờ khai:</strong> Lên báo cáo định kỳ.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">Đầu vào:</strong> Đồng bộ HĐ từ NCC tự động.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Kích hoạt Thuế - Kế toán.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Quản lý Bộ 4 sổ (S2b, S2c, S2d, S2e).</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">Tờ khai:</strong> Mẫu 01/CNKD (Quý) & Quyết toán năm.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span><strong class="text-slate-800">HĐ Đầu vào:</strong> Hỗ trợ kết nối CQT đồng bộ quản lý.</span></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-purple-400"></i> Chuẩn bị HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Tạo chữ ký số KiotViet IntrustCA.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Kích hoạt tính năng & Cấu hình.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Lập hồ sơ đăng ký HĐĐT với CQT.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Thiết lập Mẫu Hóa đơn & Logo.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Đồng bộ xuyên suốt dữ liệu.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Đăng ký Chữ ký số IntrustCA.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Kích hoạt hệ thống KVE.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Thiết lập Chữ ký số.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Lập Tờ khai sử dụng HĐĐT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Thiết lập mẫu HĐĐT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Kết nối hệ thống KVS (QLBH) và KVE.</span></li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-purple-400"></i> Vận hành HĐĐT</h4>
                                     <ul class="space-y-2 text-xs text-slate-600">
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Luồng xuất hóa đơn tiêu chuẩn.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Xử lý sai sót: Sửa/Thay thế.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Thực hiện nộp thông báo sai sót.</span></li>
-                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Theo dõi các Bảng kê chi tiết.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Phát hành HĐĐT từ Máy tính tiền.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Gửi Hóa đơn điện tử cho CQT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Xử lý hóa đơn sai sót.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-purple-400 mt-0.5"></i> <span>Báo cáo, bảng kê sử dụng HĐĐT.</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -472,9 +491,59 @@
                             <div class="bg-purple-50/50 p-4 rounded-2xl border border-purple-100">
                                 <h4 class="font-display font-bold text-purple-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
                                 <div class="flex flex-wrap gap-2 text-xs font-semibold text-purple-700">
-                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-purple-100 hover:border-purple-200">Lập HĐ trực tiếp (MTT/Thường)</span>
-                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-purple-100 hover:border-purple-200">Quản lý HH/KH trên eInvoice</span>
-                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-purple-100 hover:border-purple-200">Chứng từ khấu trừ Thuế TNCN</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-purple-100 hover:border-purple-200 transition-colors">Lập HĐĐT trực tiếp từ KVE (không qua KVS)</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-purple-100 hover:border-purple-200 transition-colors">Quản lý Hàng hóa, khách hàng trên KVE</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-purple-100 hover:border-purple-200 transition-colors">Quản lý Chứng từ khấu trừ Thuế TNCN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PHẦN 5: Nhóm 5 -->
+                    <div class="bg-white rounded-3xl border border-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden hover:shadow-[0_8px_30px_rgba(244,63,94,0.1)] transition-all">
+                        <div class="bg-rose-50/80 px-6 py-4 border-b border-rose-100 flex items-center gap-3">
+                            <i class="fa-solid fa-building text-rose-500 text-2xl"></i>
+                            <h3 class="font-display font-black text-rose-800 text-lg">PHẦN 5: HƯỚNG DẪN KIOTVIET CHO HKD NHÓM 5 (&gt; 50 TỶ)</h3>
+                        </div>
+                        <div class="p-6 text-sm text-slate-700">
+                            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                                <div>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-1 text-rose-400"></i> Thuế - Kế toán</h4>
+                                    <ul class="space-y-2 text-xs text-slate-600">
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span><strong class="text-slate-800">Thiết lập:</strong> Kích hoạt Thuế - Kế toán.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span><strong class="text-slate-800">Sổ Kế Toán:</strong> Quản lý Bộ 4 sổ (S2b, S2c, S2d, S2e).</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span><strong class="text-slate-800">Tờ khai:</strong> Mẫu 01/CNKD (Tháng) & Quyết toán năm.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span><strong class="text-slate-800">HĐ Đầu vào:</strong> Hỗ trợ kết nối CQT đồng bộ quản lý.</span></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-2 text-rose-400"></i> Chuẩn bị HĐĐT</h4>
+                                    <ul class="space-y-2 text-xs text-slate-600">
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Đăng ký Chữ ký số IntrustCA.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Kích hoạt hệ thống KVE.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Thiết lập Chữ ký số.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Lập Tờ khai sử dụng HĐĐT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Thiết lập mẫu HĐĐT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Kết nối hệ thống KVS (QLBH) và KVE.</span></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-slate-800 mb-3 border-b border-slate-100 pb-2 uppercase text-xs tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-3 text-rose-400"></i> Vận hành HĐĐT</h4>
+                                    <ul class="space-y-2 text-xs text-slate-600">
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Phát hành HĐĐT từ Máy tính tiền.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Gửi Hóa đơn điện tử cho CQT.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Xử lý hóa đơn sai sót.</span></li>
+                                        <li class="flex gap-2 items-start"><i class="fa-solid fa-check text-rose-400 mt-0.5"></i> <span>Báo cáo, bảng kê sử dụng HĐĐT.</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="bg-rose-50/50 p-4 rounded-2xl border border-rose-100">
+                                <h4 class="font-display font-bold text-rose-800 mb-2.5 text-xs uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-amber-500"></i> Tính năng nâng cao</h4>
+                                <div class="flex flex-wrap gap-2 text-xs font-semibold text-rose-700">
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-rose-100 hover:border-rose-200 transition-colors">Lập HĐĐT trực tiếp từ KVE (không qua KVS)</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-rose-100 hover:border-rose-200 transition-colors">Quản lý Hàng hóa, khách hàng trên KVE</span>
+                                    <span class="bg-white px-3 py-1.5 rounded-lg shadow-sm border border-rose-100 hover:border-rose-200 transition-colors">Quản lý Chứng từ khấu trừ Thuế TNCN</span>
                                 </div>
                             </div>
                         </div>
@@ -535,13 +604,16 @@
                         
                         <h3 class="font-display font-black text-slate-800 text-2xl mb-4">Chia sẻ Guideline Xử lý Vấn đề (Thực chiến)</h3>
                         <p class="text-slate-600 max-w-2xl mx-auto mb-8">
-                            Phiên thảo luận nội bộ: PM Hoàng Thị Dung và đại diện các team (Pháp chế, CS, Kỹ thuật) sẽ chia sẻ guideline chuyên sâu để xử lý các vấn đề "nóng" đã được nhận định trên thị trường liên quan đến:
+                            Phiên thảo luận nội bộ: PM Hoàng Thị Dung và đại diện các phòng ban liên quan sẽ trả lời các câu hỏi trước và trong chương trình về các chủ đề:
                         </p>
                         
-                        <div class="flex flex-wrap justify-center gap-4 mb-8">
-                            <div class="bg-blue-50/80 text-blue-700 px-5 py-3 rounded-2xl font-bold border border-blue-100 flex items-center gap-2 shadow-sm"><i class="fa-solid fa-receipt text-blue-400"></i> Hóa đơn Điện tử</div>
-                            <div class="bg-emerald-50/80 text-emerald-700 px-5 py-3 rounded-2xl font-bold border border-emerald-100 flex items-center gap-2 shadow-sm"><i class="fa-solid fa-file-invoice-dollar text-emerald-400"></i> Kê khai Thuế</div>
-                            <div class="bg-purple-50/80 text-purple-700 px-5 py-3 rounded-2xl font-bold border border-purple-100 flex items-center gap-2 shadow-sm"><i class="fa-solid fa-book text-purple-400"></i> Sổ sách Kế toán</div>
+                        <div class="flex flex-wrap justify-center gap-3 mb-8 max-w-4xl mx-auto">
+                            <div class="bg-slate-50/80 text-slate-700 px-4 py-2.5 rounded-xl font-bold border border-slate-200 flex items-center gap-2 shadow-sm text-sm"><i class="fa-solid fa-scale-balanced text-slate-400"></i> Quy định pháp lý</div>
+                            <div class="bg-blue-50/80 text-blue-700 px-4 py-2.5 rounded-xl font-bold border border-blue-100 flex items-center gap-2 shadow-sm text-sm"><i class="fa-solid fa-signature text-blue-400"></i> Chữ ký số</div>
+                            <div class="bg-indigo-50/80 text-indigo-700 px-4 py-2.5 rounded-xl font-bold border border-indigo-100 flex items-center gap-2 shadow-sm text-sm"><i class="fa-solid fa-receipt text-indigo-400"></i> Hóa đơn điện tử</div>
+                            <div class="bg-emerald-50/80 text-emerald-700 px-4 py-2.5 rounded-xl font-bold border border-emerald-100 flex items-center gap-2 shadow-sm text-sm"><i class="fa-solid fa-file-invoice-dollar text-emerald-400"></i> Thuế - Kế toán</div>
+                            <div class="bg-orange-50/80 text-orange-700 px-4 py-2.5 rounded-xl font-bold border border-orange-100 flex items-center gap-2 shadow-sm text-sm"><i class="fa-solid fa-store text-orange-400"></i> KVS (Retail - FNB - Salon - Hotel)</div>
+                            <div class="bg-purple-50/80 text-purple-700 px-4 py-2.5 rounded-xl font-bold border border-purple-100 flex items-center gap-2 shadow-sm text-sm"><i class="fa-solid fa-list-check text-purple-400"></i> Quy trình - Quy định</div>
                         </div>
 
                         <div class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 bg-slate-50 px-5 py-2.5 rounded-xl border border-slate-100 shadow-sm">
@@ -562,7 +634,7 @@
                         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border border-white/40 mb-6 shadow-inner">
                             <i class="fa-solid fa-flag-checkered text-3xl text-white drop-shadow-md"></i>
                         </div>
-                        <h2 class="font-display text-3xl md:text-4xl font-black mb-4 leading-tight drop-shadow-sm">Nắm vững 4 nhóm khách hàng<br>là chìa khóa chốt sale 2026!</h2>
+                        <h2 class="font-display text-3xl md:text-4xl font-black mb-4 leading-tight drop-shadow-sm">Nắm vững 5 nhóm khách hàng<br>là chìa khóa chốt sale 2026!</h2>
                         <p class="text-cyan-50 mb-10 max-w-xl mx-auto font-medium">Vui lòng truy cập các tài nguyên đào tạo và hướng dẫn sử dụng dưới đây để chuẩn bị tốt nhất cho các kịch bản tư vấn trên thị trường.</p>
                         
                         <!-- Updated Links Section -->
