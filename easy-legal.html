@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Talk 2026 - Giải đáp vấn đề Thuế & KiotViet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: { 900: '#1e3a8a' } },
+                    animation: {
+                        'blob': 'blob 10s infinite',
+                        'zoom-in': 'zoomIn 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        zoomIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: 'Segoe UI', sans-serif; background-color: #f8fafc; }
+        
+        .slide { display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.4s ease-in-out; z-index: 10; flex-direction: column; }
+        .slide.active { display: flex; opacity: 1; }
+        
+        /* GLASS EFFECT */
+        .glass {
+            background: rgba(255, 255, 255, 0.75); 
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+        }
+
+        #global-logo { position: fixed; top: 24px; left: 32px; height: 36px; z-index: 9999; transition: opacity 0.3s ease; }
+        .animate-zoom-in { opacity: 0; }
+        .slide.active .animate-zoom-in { animation-play-state: running; }
+        
+        /* Custom Scrollbar cho Slide Q&A dài */
+        .custom-scroll::-webkit-scrollbar { width: 6px; }
+        .custom-scroll::-webkit-scrollbar-track { background: transparent; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="text-gray-800 relative select-none">
+
+    <img id="global-logo" src="https://logo.kiotviet.vn/KiotViet-Logo-Horizontal.svg" alt="KiotViet Logo">
+
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-32 left-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <div id="slide-container" class="relative z-10 w-full h-full flex items-center justify-center">
+        
+        <div class="slide flex items-center justify-center p-8 active">
+            <div class="bg-white/80 backdrop-blur-xl p-12 rounded-3xl shadow-2xl border border-white/50 max-w-4xl w-full text-center animate-zoom-in">
+                <h1 class="text-5xl font-extrabold text-blue-900 mb-6 leading-tight">SEMINAR: BỘ GIẢI PHÁP EASY LEGAL</h1>
+                <div class="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-xl text-gray-600 font-medium">KIOTVIET ĐỒNG HÀNH CÙNG HỘ KINH DOANH</p>
+            </div>
+        </div>
+
+        <div class="slide glass flex items-center justify-center p-12">
+            <div class="flex flex-row items-center gap-12 max-w-6xl w-full">
+                <div class="flex-1 text-right border-r-4 border-blue-600 pr-12 animate-zoom-in">
+                    <h2 class="text-5xl font-extrabold text-blue-900 leading-tight">Phần 1<br>Bối cảnh & Cơ hội</h2>
+                </div>
+                <div class="flex-1 animate-zoom-in" style="animation-delay: 0.1s;">
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-bullhorn text-blue-600"></i> Khai mạc & Ổn định tổ chức</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-chart-line text-blue-600"></i> Cập nhật thị trường</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-lightbulb text-blue-600"></i> Giới thiệu Easy Legal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <h2 class="text-4xl font-bold text-blue-900 mb-10 text-center animate-zoom-in">Khai mạc chương trình</h2>
+            <div class="flex flex-col gap-6 w-full max-w-4xl">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-100">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-users text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Mục tiêu chương trình</h3>
+                        <p class="text-gray-700 mt-1">Giúp bộ phận Sales/DVKH tự tin tư vấn, xử lý triệt để bài toán thuế/kế toán cho khách hàng theo các quy định mới của Nhà nước.</p>
+                    </div>
+                </div>
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-200">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-clock text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Thời gian & Đối tượng</h3>
+                        <p class="text-gray-700 mt-1">14:00 - 17:00 (180 phút). Dành cho Đội ngũ Sales & DVKH toàn quốc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <h2 class="text-4xl font-bold text-blue-900 mb-10 text-center animate-zoom-in">Bối cảnh & Giới thiệu Easy Legal</h2>
+            <div class="flex flex-col gap-6 w-full max-w-4xl">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-100">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-chart-line text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Cập nhật thị trường</h3>
+                        <p class="text-gray-700 mt-1">Điểm nhanh các thay đổi trong Nghị định Thuế/Kế toán và những khó khăn, vướng mắc thực tế của khách hàng.</p>
+                    </div>
+                </div>
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-200">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-lightbulb text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Giới thiệu Easy Legal</h3>
+                        <p class="text-gray-700 mt-1">Những thay đổi trên phần mềm giúp Sales/DVKH hỗ trợ tư vấn khách hàng tuân thủ pháp lý. Nêu bật các cải tiến khiến KiotViet khác biệt so với đối thủ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex items-center justify-center p-12">
+            <div class="flex flex-row items-center gap-12 max-w-6xl w-full">
+                <div class="flex-1 text-right border-r-4 border-emerald-600 pr-12 animate-zoom-in">
+                    <h2 class="text-5xl font-extrabold text-blue-900 leading-tight">Phần 2: Giải pháp<br>Easy Legal & Live Demo</h2>
+                </div>
+                <div class="flex-1 animate-zoom-in" style="animation-delay: 0.1s;">
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-table text-emerald-600"></i> Bảng phân loại 5 Nhóm HKD</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-scale-balanced text-emerald-600"></i> Tính "Legal" (Pháp lý)</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-wand-magic-sparkles text-emerald-600"></i> Tính "Easy" (Dễ dàng)</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-layer-group text-emerald-600"></i> Đa năng hóa một gian hàng</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide flex items-center justify-center w-full h-full p-4" data-type="infographic">
+            <div class="bg-white/95 backdrop-blur-xl w-full max-w-[95%] h-[90%] rounded-3xl shadow-2xl border border-white flex flex-col p-8 overflow-hidden animate-zoom-in">
+                <h2 class="text-3xl font-extrabold text-blue-900 mb-6 text-center shrink-0">Bảng Phân loại & Nghĩa vụ 5 Nhóm HKD 2026</h2>
+                <div class="flex-1 w-full overflow-auto rounded-xl border border-gray-200 custom-scroll">
+                    <table class="w-full text-left text-sm whitespace-nowrap">
+                        <thead class="bg-slate-100 sticky top-0 z-10 shadow-sm">
+                            <tr>
+                                <th class="p-4 border-b border-r font-bold text-gray-800 bg-slate-200">Tiêu chí</th>
+                                <th class="p-4 border-b border-r font-bold text-emerald-700 bg-emerald-50">Nhóm 1<br><span class="text-xs font-normal">(<= 500tr)</span></th>
+                                <th class="p-4 border-b border-r font-bold text-sky-700 bg-sky-50">Nhóm 2<br><span class="text-xs font-normal">(500tr - 1 tỷ)</span></th>
+                                <th class="p-4 border-b border-r font-bold text-indigo-700 bg-indigo-50">Nhóm 3<br><span class="text-xs font-normal">(1 tỷ - 3 tỷ)</span></th>
+                                <th class="p-4 border-b border-r font-bold text-purple-700 bg-purple-50">Nhóm 4<br><span class="text-xs font-normal">(3 tỷ - 50 tỷ)</span></th>
+                                <th class="p-4 border-b font-bold text-rose-700 bg-rose-50">Nhóm 5<br><span class="text-xs font-normal">(> 50 tỷ)</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-r font-bold text-blue-900 bg-blue-50/30">Thuế GTGT</td>
+                                <td class="p-4 border-b border-r text-gray-500">Miễn thuế</td>
+                                <td class="p-4 border-b border-r">Nộp theo Tỷ lệ % x Doanh thu</td>
+                                <td class="p-4 border-b border-r">Nộp theo Tỷ lệ % x Doanh thu</td>
+                                <td class="p-4 border-b border-r">Nộp theo Tỷ lệ % x Doanh thu</td>
+                                <td class="p-4 border-b">Nộp theo Tỷ lệ % x Doanh thu</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-r font-bold text-blue-900 bg-blue-50/30">Thuế TNCN</td>
+                                <td class="p-4 border-b border-r text-gray-500">Miễn thuế</td>
+                                <td class="p-4 border-b border-r"><span class="font-semibold text-sky-600">Chọn 1 trong 2:</span><br>1. % x (DT - 500tr)<br>2. TN tính thuế x 15%</td>
+                                <td class="p-4 border-b border-r"><span class="font-semibold text-indigo-600">Chọn 1 trong 2:</span><br>1. % x (DT - 500tr)<br>2. TN tính thuế x 15%</td>
+                                <td class="p-4 border-b border-r"><span class="font-semibold text-purple-600">Bắt buộc:</span><br>TN tính thuế x 17%</td>
+                                <td class="p-4 border-b"><span class="font-semibold text-rose-600">Bắt buộc:</span><br>TN tính thuế x 20%</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-r font-bold text-blue-900 bg-blue-50/30">Mẫu Sổ kế toán</td>
+                                <td class="p-4 border-b border-r">S1a-HKD</td>
+                                <td class="p-4 border-b border-r">S2a hoặc Bộ 4 sổ<br>(S2b, S2c, S2d, S2e)</td>
+                                <td class="p-4 border-b border-r">S2a hoặc Bộ 4 sổ<br>(S2b, S2c, S2d, S2e)</td>
+                                <td class="p-4 border-b border-r font-bold">Bắt buộc Bộ 4 sổ<br>(S2b, S2c, S2d, S2e)</td>
+                                <td class="p-4 border-b font-bold">Bắt buộc Bộ 4 sổ<br>(S2b, S2c, S2d, S2e)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-r font-bold text-blue-900 bg-blue-50/30">Mẫu Tờ khai thuế</td>
+                                <td class="p-4 border-b border-r">01/TKN-CNKD (Năm)</td>
+                                <td class="p-4 border-b border-r">01/CNKD (Quý)</td>
+                                <td class="p-4 border-b border-r">01/CNKD (Quý)</td>
+                                <td class="p-4 border-b border-r">01/CNKD (Quý)<br>+ Quyết toán (Năm)</td>
+                                <td class="p-4 border-b font-bold text-rose-600">01/CNKD (Tháng)<br><span class="text-gray-700 font-normal">+ Quyết toán (Năm)</span></td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-r font-bold text-blue-900 bg-blue-50/30">Hóa đơn điện tử</td>
+                                <td class="p-4 border-b border-r text-red-500 font-bold">Không được sử dụng</td>
+                                <td class="p-4 border-b border-r text-gray-500">Không bắt buộc</td>
+                                <td class="p-4 border-b border-r font-bold text-blue-600">Bắt buộc sử dụng</td>
+                                <td class="p-4 border-b border-r font-bold text-blue-600">Bắt buộc sử dụng</td>
+                                <td class="p-4 border-b font-bold text-blue-600">Bắt buộc sử dụng</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 border-b border-r font-bold text-blue-900 bg-blue-50/30">Hóa đơn đầu vào</td>
+                                <td class="p-4 border-b border-r text-gray-500">Không cấp TK tra cứu</td>
+                                <td class="p-4 border-b border-r text-gray-500">Không cấp TK tra cứu</td>
+                                <td class="p-4 border-b border-r text-green-600 font-semibold">Cấp TK tra cứu</td>
+                                <td class="p-4 border-b border-r text-green-600 font-semibold">Cấp TK tra cứu</td>
+                                <td class="p-4 border-b text-green-600 font-semibold">Cấp TK tra cứu</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <h2 class="text-4xl font-bold text-blue-900 mb-10 text-center animate-zoom-in">Tính "Legal" (Pháp lý)</h2>
+            <div class="flex flex-col gap-6 w-full max-w-4xl">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-100">
+                    <div class="w-14 h-14 bg-emerald-100/80 rounded-full flex items-center justify-center text-emerald-600 shrink-0"><i class="fa-solid fa-scale-balanced text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Xác định phân nhóm & Nghĩa vụ</h3>
+                        <p class="text-gray-700 mt-1">Phân nhóm HKD theo mức doanh thu. Đáp ứng đầy đủ Sổ kế toán & Tờ khai tương ứng. Đảm bảo dữ liệu chuẩn xác khi chuyển nhóm kê khai.</p>
+                    </div>
+                </div>
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-200">
+                    <div class="w-14 h-14 bg-emerald-100/80 rounded-full flex items-center justify-center text-emerald-600 shrink-0"><i class="fa-solid fa-desktop text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Minh họa trên phần mềm</h3>
+                        <p class="text-gray-700 mt-1">Lựa chọn nhóm lúc Onboarding tự động sinh ra nghĩa vụ. Khi đổi "Thiết lập Hồ sơ kê khai", phần mềm tự động cập nhật Sổ & Tờ khai.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <h2 class="text-4xl font-bold text-blue-900 mb-10 text-center animate-zoom-in">Tính "Easy" (Dễ dàng) - Thiết lập & Quản lý</h2>
+            <div class="flex flex-col gap-6 w-full max-w-4xl">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-100">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-check-double text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Thiết lập VAT theo hàng hóa (Onboard)</h3>
+                        <p class="text-gray-700 mt-1">Thiết lập Thuế VAT chi tiết theo nhóm hàng để dữ liệu đúng ngay từ đầu (đầu xuôi, đuôi lọt). Đáp ứng cho cửa hàng kinh doanh nhiều ngành nghề.</p>
+                    </div>
+                </div>
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-200">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-box-open text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Quản lý hàng hóa chưa sẵn sàng kê khai</h3>
+                        <p class="text-gray-700 mt-1">Hàng hóa là CCDC chỉ cần quản lý tồn kho hoặc chưa rõ thuế suất có thể linh hoạt chọn "Chưa sẵn sàng".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <h2 class="text-4xl font-bold text-blue-900 mb-10 text-center animate-zoom-in">Tính "Easy" (Dễ dàng) - Kiểm soát & Tự động</h2>
+            <div class="flex flex-col gap-6 w-full max-w-4xl">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-100">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-magnifying-glass text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Kiểm tra dữ liệu gốc & HĐĐT</h3>
+                        <p class="text-gray-700 mt-1">Cho phép xem giao dịch gốc đồng bộ vào Tờ khai. Kiểm soát danh sách HĐĐT chưa xuất để sớm phát hiện sai sót và hủy bỏ khỏi sổ sách kế toán.</p>
+                    </div>
+                </div>
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-200">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-gears text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Tự động hóa Hóa đơn điều chỉnh</h3>
+                        <p class="text-gray-700 mt-1">Hỗ trợ tự động tạo Hóa đơn điều chỉnh khi phát sinh Trả hàng, giúp tiết kiệm tối đa thời gian thao tác.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <h2 class="text-4xl font-bold text-blue-900 mb-10 text-center animate-zoom-in">Đa năng hóa một gian hàng</h2>
+            <div class="flex flex-col gap-6 w-full max-w-4xl">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-100">
+                    <div class="w-14 h-14 bg-indigo-100/80 rounded-full flex items-center justify-center text-indigo-600 shrink-0"><i class="fa-solid fa-layer-group text-2xl"></i></div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sử dụng 1 gian hàng cho nhiều ngành nghề</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                                <h4 class="font-bold text-indigo-800 text-sm">Mô hình 1 (VD: Tạp hóa)</h4>
+                                <p class="text-xs text-gray-700 mt-1">Bán hàng chuyên nghiệp, kê khai thuế bài bản qua phần mềm máy tính.</p>
+                            </div>
+                            <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                                <h4 class="font-bold text-indigo-800 text-sm">Mô hình 2 (VD: Rửa xe)</h4>
+                                <p class="text-xs text-gray-700 mt-1">Thao tác doanh thu nhanh trên điện thoại, tự ghi sổ sách kế toán giấy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-200">
+                    <div class="w-14 h-14 bg-green-100/80 rounded-full flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-shield-check text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Giải pháp Phân quyền</h3>
+                        <p class="text-gray-700 mt-1">Nhờ tính năng phân quyền nhóm hàng nghiêm ngặt, dữ liệu tách biệt hoàn toàn. Loại bỏ rủi ro bán nhầm, giúp quản lý sổ sách chính xác tuyệt đối.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex items-center justify-center p-12">
+            <div class="flex flex-row items-center gap-12 max-w-6xl w-full">
+                <div class="flex-1 text-right border-r-4 border-blue-600 pr-12 animate-zoom-in">
+                    <h2 class="text-5xl font-extrabold text-blue-900 leading-tight">Phần 3<br>Tầm nhìn "Easy"</h2>
+                </div>
+                <div class="flex-1 animate-zoom-in" style="animation-delay: 0.1s;">
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-map-location-dot text-blue-600"></i> Định hướng & Lộ trình nâng cấp</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-rocket text-blue-600"></i> Tính năng sắp ra mắt</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <h2 class="text-4xl font-bold text-blue-900 mb-10 text-center animate-zoom-in">Lộ trình & Tính năng sắp ra mắt</h2>
+            <div class="flex flex-col gap-6 w-full max-w-4xl">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-100">
+                    <div class="w-14 h-14 bg-indigo-100/80 rounded-full flex items-center justify-center text-indigo-600 shrink-0"><i class="fa-solid fa-map-location-dot text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Định hướng nâng cấp H1</h3>
+                        <p class="text-gray-700 mt-1">Liên tục cải tiến dự án Easy Legal. Chuyển đổi phần mềm từ trải nghiệm phức tạp sang dễ dàng với Timeline cụ thể.</p>
+                    </div>
+                </div>
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-200">
+                    <div class="w-14 h-14 bg-indigo-100/80 rounded-full flex items-center justify-center text-indigo-600 shrink-0"><i class="fa-solid fa-rocket text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Tính năng sắp ra mắt</h3>
+                        <p class="text-gray-700 mt-1">Cập nhật cho HKD tính thuế TNCN trên Lợi nhuận & Cập nhật cho Doanh nghiệp. Bổ sung các tính năng: Thuế TTĐB, QL chi phí đầu vào, Kế toán chuyên biệt...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex items-center justify-center p-12">
+            <div class="flex flex-row items-center gap-12 max-w-6xl w-full">
+                <div class="flex-1 text-right border-r-4 border-blue-600 pr-12 animate-zoom-in">
+                    <h2 class="text-5xl font-extrabold text-blue-900 leading-tight">Phần 4<br>Tháo gỡ nút thắt - Q&A</h2>
+                </div>
+                <div class="flex-1 animate-zoom-in" style="animation-delay: 0.1s;">
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-comments text-blue-600"></i> Cơ chế điều phối Q&A</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-scale-balanced text-blue-600"></i> Quy định pháp lý</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-file-invoice-dollar text-blue-600"></i> Thuế - Kế toán</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-receipt text-blue-600"></i> Hóa đơn điện tử</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-signature text-blue-600"></i> Chữ ký số</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-store text-blue-600"></i> Phần mềm bán hàng</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <h2 class="text-4xl font-bold text-blue-900 mb-10 text-center animate-zoom-in">Cơ chế điều phối Q&A</h2>
+            <div class="flex flex-col gap-6 w-full max-w-4xl">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-100">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-comments text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Đan xen câu hỏi (Khảo sát & Live)</h3>
+                        <p class="text-gray-700 mt-1">L&D Host điều phối, Team Product giải đáp đan xen các câu hỏi đã tổng hợp và câu hỏi phát sinh trực tiếp tại Group Chat Zoom.</p>
+                    </div>
+                </div>
+                <div class="bg-white/95 p-6 rounded-2xl shadow-lg border border-white flex items-center gap-5 w-full animate-zoom-in delay-200">
+                    <div class="w-14 h-14 bg-blue-100/80 rounded-full flex items-center justify-center text-blue-600 shrink-0"><i class="fa-solid fa-lightbulb text-2xl"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Thu thập ý kiến & Đề xuất</h3>
+                        <p class="text-gray-700 mt-1">Ghi nhận các đề xuất ngoài lề từ Sales/DVKH để xây dựng phương án hỗ trợ quá trình tư vấn, chăm sóc khách hàng tốt hơn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <div class="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-6 animate-zoom-in">
+                <i class="fa-solid fa-scale-balanced text-5xl"></i>
+            </div>
+            <h2 class="text-5xl font-extrabold text-blue-900 text-center animate-zoom-in delay-100">Q&A: Quy định pháp lý</h2>
+            <div class="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mt-6 animate-zoom-in delay-200"></div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-purple-100 text-purple-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-scale-balanced"></i> Q&A: Quy định pháp lý
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-purple-500 flex flex-col gap-2">
+                    <div class="text-purple-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Các quy định về hộ kinh doanh nào có mã của cơ quan thuế, hộ kinh doanh nào không, ngành nghề nào xuất hóa đơn từ máy tính tiền?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Khoản 5, Điều 8, Nghị định 123/2020/NĐ-CP: HKD có doanh thu từ 01 tỷ đồng trở lên thì bắt buộc sử dụng HĐĐT (có thể sử dụng HĐ có mã hoặc HĐ có mã từ máy tính tiền). HĐ máy tính tiền áp dụng cho các ngành hàng cung cấp trực tiếp đến người tiêu dùng (bán lẻ, ăn uống, nhà hàng, dịch vụ...).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-purple-100 text-purple-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-scale-balanced"></i> Q&A: Quy định pháp lý
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-purple-500 flex flex-col gap-2">
+                    <div class="text-purple-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Nhiều cửa hàng đang có tình trạng sợ sử dụng phần mềm vì liên quan tới việc đóng thuế. Khi bán hàng, họ không xuất hóa đơn vì sợ doanh thu đạt mức phải nộp thuế. Bên Cơ quan Thuế sẽ có cách gì để ghi nhận nếu có vi phạm?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Theo Khoản 6, Điều 13: HKD có trách nhiệm cung cấp sổ kế toán, hóa đơn, phần mềm quản lý bán hàng... Cơ quan thuế sẽ kiểm tra đối chiếu dữ liệu của phần mềm bán hàng có khớp với giao dịch xuất HĐĐT và sổ kế toán không. Ngoài ra, CQT còn dùng dữ liệu hóa đơn đầu vào để đối chiếu tương quan đầu vào - đầu ra.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-purple-100 text-purple-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-scale-balanced"></i> Q&A: Quy định pháp lý
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-purple-500 flex flex-col gap-2">
+                    <div class="text-purple-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Phần điều chỉnh hóa đơn, thay thế hóa đơn điện tử đều có 1 mục là "Biên bản điều chỉnh". Vậy có bắt buộc phải làm biên bản điều chỉnh không ạ?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Theo Nghị định 70/2025/NĐ-CP:<br>- Nếu người mua là DN, tổ chức, HKD: Trước khi lập HĐ thay thế/điều chỉnh thì phải lập Biên bản thỏa thuận.<br>- Nếu người mua là cá nhân (khách lẻ): Không cần lập biên bản, người bán chỉ phải thông báo cho người mua.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-purple-100 text-purple-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-scale-balanced"></i> Q&A: Quy định pháp lý
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-purple-500 flex flex-col gap-2">
+                    <div class="text-purple-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Khách hàng là phòng khám, vừa cung cấp dịch vụ vừa bán hàng hóa thì đóng thuế như thế nào?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Khách hàng nộp thuế theo phương pháp Doanh thu x Thuế suất (bao gồm thuế GTGT và thuế TNCN).<br>- Dịch vụ khám chữa bệnh: Không chịu thuế GTGT, thuế suất TNCN là 2%.<br>- Bán thuốc: Thuế suất GTGT 1%, thuế suất TNCN 0,5%.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-purple-100 text-purple-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-scale-balanced"></i> Q&A: Quy định pháp lý
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-purple-500 flex flex-col gap-2">
+                    <div class="text-purple-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Việc nộp sổ kế toán theo quy định hiện hành được thực hiện như thế nào?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Sổ sách kế toán về quy định không cần phải nộp mà chỉ cần lưu trữ nội bộ tại đơn vị (trên phương tiện điện tử hoặc trên sổ giấy), dùng để xuất trình khi Cơ quan thuế thực hiện thanh tra kiểm tra.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-purple-100 text-purple-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-scale-balanced"></i> Q&A: Quy định pháp lý
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-purple-500 flex flex-col gap-2">
+                    <div class="text-purple-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Nếu khách hàng nhập hóa đơn đầu vào trên KiotViet rồi thì có cần giữ lại hóa đơn của nhà cung cấp để đối chiếu sau này không?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Tính năng hóa đơn đầu vào trên KiotViet là để phục vụ việc nhập dữ liệu vào phần mềm nhanh chóng hơn, dữ liệu này không có tính pháp lý. Hóa đơn điện tử đầu vào cần được lưu trữ ở định dạng XML (định dạng có ý nghĩa pháp lý), do đó vẫn cần giữ lại file XML của Nhà cung cấp để phục vụ kiểm tra.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-purple-100 text-purple-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-scale-balanced"></i> Q&A: Quy định pháp lý (Câu hỏi cần làm rõ)
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-gray-400 flex flex-col gap-2">
+                    <p class="text-gray-800 font-medium text-[15px] leading-relaxed">
+                        <strong class="text-gray-600">Q:</strong> Đối với hàng đầu vào, có nhất thiết phải kê khai bằng hóa đơn đầu vào...<br>
+                        <strong class="text-emerald-600">A:</strong> Câu hỏi chưa rõ.<br><br>
+                        <strong class="text-gray-600">Q:</strong> Xin hướng dẫn chi tiết về cách kê khai thuế. Cụ thể việc kê khai thuế Quý 1...<br>
+                        <strong class="text-emerald-600">A:</strong> Chưa rõ câu hỏi (cần thông tin cụ thể hơn về vướng mắc).<br><br>
+                        <strong class="text-gray-600">Q:</strong> Quy trình nộp báo cáo thuế theo quý và nộp thuế diễn ra như thế nào?...<br>
+                        <strong class="text-emerald-600">A:</strong> Chưa rõ câu hỏi.<br><br>
+                        <strong class="text-gray-600">Q:</strong> Nếu không có hóa đơn đầu vào thì hệ thống có đang không duyệt cho xuất HĐĐT không?<br>
+                        <strong class="text-emerald-600">A:</strong> Không có quy định nào quy định về vấn đề này.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <div class="w-24 h-24 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 mb-6 animate-zoom-in">
+                <i class="fa-solid fa-file-invoice-dollar text-5xl"></i>
+            </div>
+            <h2 class="text-5xl font-extrabold text-blue-900 text-center animate-zoom-in delay-100">Q&A: Thuế - Kế toán</h2>
+            <div class="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mt-6 animate-zoom-in delay-200"></div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Q&A: Thuế - Kế toán
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Em muốn hỏi về danh mục hàng hóa đối với ngành hàng có Thuế tiêu thụ đặc biệt. Hiện tại bên mình chưa thiết lập được thuế suất riêng cho danh mục hàng này, vậy dự kiến khi nào có?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Dự kiến trong Quý 2 F&B sẽ làm thuế tiêu thụ đặc biệt.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Q&A: Thuế - Kế toán
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Hiện tại các đầu sổ sẽ cập nhật đúng theo quy định của từng ngành hàng đúng không ạ?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Sổ kế toán tuân thủ theo Thông tư quy định. Số lượng sổ và biểu mẫu sổ được quy định cho từng nhóm hộ kinh doanh theo phương pháp tính thuế và mức doanh thu, không phân loại theo ngành hàng.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Q&A: Thuế - Kế toán
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Hộ kinh doanh nhóm 2 có doanh thu dưới 1 tỷ đồng, không xuất hóa đơn điện tử thì có bắt buộc phải lập phụ lục giảm thuế theo Nghị quyết 174 và Nghị định 204 không ạ?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Việc được giảm thuế chỉ được áp dụng nếu hộ kinh doanh có thực hiện xuất hóa đơn. Do đó nếu không xuất hóa đơn điện tử thì không được áp dụng giảm thuế -> không có căn cứ để lập phụ lục giảm thuế -> không cần lập.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Q&A: Thuế - Kế toán
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Các loại sổ của hộ kinh doanh thuộc nhóm 3 không có tính năng giảm thuế theo từng mặt hàng, thì khi khai báo thuế ở bảng phụ lục hợp đồng phải làm sao? Nếu nhập từng loại hàng hóa thì sẽ rất mất thời gian.</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Sổ kế toán chỉ ghi lại các giao dịch bán/trả hàng về doanh thu theo từng mức thuế, không có chức năng setup giảm thuế theo hàng hóa. Phần giảm thuế theo hàng hóa cần setup từ danh mục KVS (Retail, F&B, Booking) tương tự như khi setup tỷ lệ tính thuế.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Q&A: Thuế - Kế toán
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Đối với bảng kê 01 trên tờ khai thuế, khi khách hàng có thao tác thay đổi hoặc tạo phiếu nhập hàng và lùi ngày, thì bảng kê 01 có cập nhật hay không? Nếu có thì sau khoảng bao lâu dữ liệu sẽ cập nhật?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Bảng kê 01/HTK của 2026 lấy thông tin tồn cuối 31/12/2025 và nộp 1 lần kèm tờ khai đầu tiên. Bảng kê xuất nhập tồn như mẫu 2025 đã được loại bỏ, khách hàng không cần kê khai.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Q&A: Thuế - Kế toán
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Khách hàng đã tạo nhiều hóa đơn trực tiếp trên KVE mà không tạo trên KiotViet. Giờ khách hàng tự tạo thủ công trên KiotViet và lùi ngày cho khớp với ngày tạo trên KVE thì các dữ liệu giao dịch này có được đưa vào sổ kế toán không?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Hóa đơn từ KVE đã được đồng bộ về sổ kế toán. Nếu khách hàng tạo thủ công trên KiotViet vẫn sẽ được đồng bộ sang sổ kế toán, tuy nhiên sẽ bị trùng (double) giao dịch.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Q&A: Thuế - Kế toán
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Đối với hộ kinh doanh, khi tạo hóa đơn trực tiếp trên KVE thì hóa đơn đó khi được đồng bộ ngược về sổ kế toán sẽ có dấu hiệu nào để nhận biết không?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Có dấu hiệu nhận biết:<br>- Với hóa đơn tạo trực tiếp trên KVE: Khi đồng bộ về sổ kế toán sẽ lấy theo mẫu số hóa đơn.<br>- Với hóa đơn đồng bộ từ KVS về: Sẽ có mã giao dịch dạng HD00xxx.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-emerald-100 text-emerald-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-file-invoice-dollar"></i> Q&A: Thuế - Kế toán (Các câu hỏi khác)
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-gray-400 flex flex-col gap-2">
+                    <p class="text-gray-800 font-medium text-[15px] leading-relaxed">
+                        <strong class="text-gray-600">Q:</strong> Khách hàng mong muốn Sổ kế toán có thể chỉnh sửa, xóa giao dịch...<br>
+                        <strong class="text-emerald-600">A:</strong> Tính năng chỉnh sửa, xóa giao dịch đã được đáp ứng trên phần mềm.<br><br>
+                        <strong class="text-gray-600">Q:</strong> Cơ chế tự động lấy dữ liệu chi phí từ hóa đơn đầu vào... khách không muốn hạch toán tự động?<br>
+                        <strong class="text-emerald-600">A:</strong> Cần giải thích thêm nhu cầu với khách hàng tại sao không muốn hạch toán các hóa đơn đầu vào này.<br><br>
+                        <strong class="text-gray-600">Q:</strong> Khách hàng giờ muốn nhập ngược lại dữ liệu 2025 để lên sổ kế toán 2025?<br>
+                        <strong class="text-emerald-600">A:</strong> Hiện không hỗ trợ xử lý dữ liệu Sổ kế toán 2025 nữa.<br><br>
+                        <strong class="text-gray-600">Q:</strong> Bảng kê 01 của tờ khai thuế năm 2025...<br>
+                        <strong class="text-emerald-600">A:</strong> Tờ khai 2025 không hỗ trợ cập nhật tính năng nữa.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <div class="w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mb-6 animate-zoom-in">
+                <i class="fa-solid fa-receipt text-5xl"></i>
+            </div>
+            <h2 class="text-5xl font-extrabold text-blue-900 text-center animate-zoom-in delay-100">Q&A: Hóa đơn điện tử</h2>
+            <div class="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mt-6 animate-zoom-in delay-200"></div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-indigo-100 text-indigo-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-receipt"></i> Q&A: Hóa đơn điện tử
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-indigo-500 flex flex-col gap-2">
+                    <div class="text-indigo-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Hộ kinh doanh bán hàng cho đại lý trong năm và đã xuất hóa đơn, nhưng có trường hợp đến đầu năm sau phát sinh đại lý trả lại hàng. Khi đó, thời điểm trả lại hàng mới lập hóa đơn điều chỉnh, như vậy lại hạch toán vào năm sau, trong khi đã kê khai doanh thu của năm trước đó. Có hướng nào tư vấn, hỗ trợ khách hàng không ạ?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Khoản 13, Điều 1, Nghị định 70/2025/NĐ-CP: HĐ điều chỉnh/thay thế do sai sót -> kê khai vào kỳ của hóa đơn gốc. HĐ điều chỉnh do trả hàng, chiết khấu... -> kê khai vào kỳ của HĐ điều chỉnh.<br><br>Sổ kế toán và tờ khai của KiotViet đang ghi nhận đúng quy tắc này. Trường hợp tờ khai đã nộp sau đó mới phát sinh HĐ điều chỉnh do sai sót thì ghi nhận bổ sung vào năm trước, và lập tờ khai bổ sung để điều chỉnh lại.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-indigo-100 text-indigo-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-receipt"></i> Q&A: Hóa đơn điện tử
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-indigo-500 flex flex-col gap-2">
+                    <div class="text-indigo-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Nếu khách hàng kinh doanh 2 ngành hàng Bán lẻ và F&B thì ký 2 gian hàng. Vậy nếu ký gói Chuyên nghiệp tặng 20.000 hóa đơn cho ngành Bán lẻ thì ký gian hàng F&B vẫn được tặng 20.000 HĐĐT đúng không ạ? Khi lập tờ khai thì khách hàng sẽ có 2 tờ khai cho 2 gian hàng?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Việc tặng hóa đơn cho 2 gian hàng: Đúng.<br>Về tờ khai thuế: Trên phần mềm, mỗi gian hàng là 1 tờ khai khác nhau theo dữ liệu tương ứng của gian hàng đó. Phần mềm chưa hỗ trợ gộp dữ liệu. Khách hàng cần tự gộp dữ liệu từ 2 tờ khai này thành 1 tờ khai duy nhất theo MST để nộp lên Cơ quan thuế.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-indigo-100 text-indigo-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-receipt"></i> Q&A: Hóa đơn điện tử
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-indigo-500 flex flex-col gap-2">
+                    <div class="text-indigo-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Hiện có nhiều khách hàng đã sử dụng nhà cung cấp HĐĐT khác, hiện chuyển sang KInvoice. Nếu HĐĐT đã phát hành từ nhà cung cấp cũ nhưng bây giờ cần làm thay thế/điều chỉnh thì trên giao diện mới của KVE chưa hỗ trợ. Dự kiến khi nào triển khai?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Tính năng lập hóa đơn điều chỉnh, thay thế cho hóa đơn ngoài phần mềm đang được dự án phát triển trong Sprint hiện tại, dự kiến go-live vào ngày 10/4/2026.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-indigo-100 text-indigo-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-receipt"></i> Q&A: Hóa đơn điện tử
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-indigo-500 flex flex-col gap-2">
+                    <div class="text-indigo-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Khách hàng gặp nhiều lỗi liên quan đến việc phát hành HĐĐT, ví dụ như lỗi không tự động gửi cho CQT dù đã bật tính năng. Đến một tháng sau mới phát hiện thì KiotViet có hỗ trợ khách hàng cùng phối hợp giải trình với cơ quan thuế không?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Có.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-indigo-100 text-indigo-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-receipt"></i> Q&A: Hóa đơn điện tử
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-indigo-500 flex flex-col gap-2">
+                    <div class="text-indigo-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Khách hàng là hộ kinh doanh có nhiều cửa hàng ở các tỉnh khác nhau. Cán bộ thuế ở các nơi yêu cầu phải đăng ký sử dụng hóa đơn với cơ quan thuế quản lý của từng cửa hàng. Tuy nhiên, CCCD của chủ hộ thì chỉ đăng ký được với một cơ quan thuế. KiotViet có hỗ trợ được không?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Cán bộ thuế đang yêu cầu sai quy định, KiotViet cũng không hỗ trợ được.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mb-6 animate-zoom-in">
+                <i class="fa-solid fa-signature text-5xl"></i>
+            </div>
+            <h2 class="text-5xl font-extrabold text-blue-900 text-center animate-zoom-in delay-100">Q&A: Chữ ký số</h2>
+            <div class="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mt-6 animate-zoom-in delay-200"></div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-blue-100 text-blue-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-signature"></i> Q&A: Chữ ký số
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-blue-500 flex flex-col gap-2">
+                    <div class="text-blue-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Nếu khách hàng là cá nhân kinh doanh, hoặc hộ kinh doanh nhưng chỉ được cấp mã số thuế đầu 8 (mã số 888), không có giấy phép kinh doanh thì có đăng ký được chữ ký số không ạ?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Hiện tại KiotViet chưa hỗ trợ theo định hướng từ đại diện phía Kinh doanh do số lượng cũng khá ít (~ 20 khách hỏi).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <div class="w-24 h-24 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 mb-6 animate-zoom-in">
+                <i class="fa-solid fa-store text-5xl"></i>
+            </div>
+            <h2 class="text-5xl font-extrabold text-blue-900 text-center animate-zoom-in delay-100">Q&A: Phần mềm bán hàng</h2>
+            <div class="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mt-6 animate-zoom-in delay-200"></div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-sky-100 text-sky-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-store"></i> Q&A: Phần mềm bán hàng
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-sky-500 flex flex-col gap-2">
+                    <div class="text-sky-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Khi nào thì bên F&B có tính năng tách giảm thuế theo từng mặt hàng theo Nghị định 204?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Trong Quý 2, F&B sẽ triển khai tính năng này.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-sky-100 text-sky-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-store"></i> Q&A: Phần mềm bán hàng
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-sky-500 flex flex-col gap-2">
+                    <div class="text-sky-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Gian hàng F&B (ngành hàng ăn uống) cũng cần quản lý kho, bao giờ thì hệ thống hỗ trợ tính năng mở kho cho ngành hàng F&B?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Trong H1, F&B sẽ go-live cấu trúc hàng hóa mới, tách hàng hóa thành thực đơn và kho hàng. Khách hàng có thể trải nghiệm bản đầu tiên vào ngày 2/4.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-sky-100 text-sky-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-store"></i> Q&A: Phần mềm bán hàng
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-sky-500 flex flex-col gap-2">
+                    <div class="text-sky-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Khách hàng là hộ kinh doanh có liên kết kéo hóa đơn đầu vào, nhưng hiện tại bên mình chỉ hỗ trợ 1 mức thuế trên 1 đơn nhập hàng, nên khách đang thấy bất tiện vì trên 1 đơn thường có nhiều loại thuế suất. Bao giờ phát triển tính năng này ạ?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Tách thuế khi nhập hàng và trên hóa đơn đầu vào đang làm, chuẩn bị go-live trước ngày 10/4.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-sky-100 text-sky-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-store"></i> Q&A: Phần mềm bán hàng
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-sky-500 flex flex-col gap-2">
+                    <div class="text-sky-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Một số khách hàng của mình là nhà phân phối, cuối tháng khách hàng được công ty trừ % doanh số thì khi đó phần hóa đơn đầu vào và giá vốn của hàng hóa sẽ hạch toán như thế nào ạ?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Cần thêm thông tin: % doanh số này công ty có xuất hóa đơn không và nhận dưới hình thức nào?</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-sky-100 text-sky-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-store"></i> Q&A: Phần mềm bán hàng
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-sky-500 flex flex-col gap-2">
+                    <div class="text-sky-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Trên hóa đơn đầu vào thường sẽ có chiết khấu thương mại, xin hỏi phần chiết khấu này cần hạch toán vào đâu?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Chiết khấu thương mại làm giảm giá của hàng hóa đầu vào. Khi hạch toán thì hạch toán theo giá sau giảm, không hạch toán phần chiết khấu này.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-sky-100 text-sky-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-store"></i> Q&A: Phần mềm bán hàng
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-sky-500 flex flex-col gap-2">
+                    <div class="text-sky-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Hiện tại khi tách biệt 2 hệ thống KVE và KVS, khi phát hành hóa đơn từ KVS và gửi cơ quan thuế, nếu phát sinh hóa đơn sai sót cần lập hóa đơn điều chỉnh/thay thế, luồng sắp triển khai sẽ cập nhật doanh thu. Tuy nhiên, với hóa đơn trên KVS thì vẫn cần phải thao tác Hủy, sao chép, tạo lại hoặc Cập nhật. Với nhiều thao tác như vậy, hộ kinh doanh sẽ rất khó nhớ, dễ sai sót. KiotViet có định hướng tối ưu các thao tác này chưa (ví dụ đồng bộ 2 chiều)?</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">- Chuẩn bị go-live tính năng khi trả hàng trên Retail sẽ tự động tạo Hóa đơn điều chỉnh.<br>- Tiếp tục xem xét tạo hóa đơn điều chỉnh, thay thế khi cập nhật hóa đơn.<br>- Không định hướng làm luồng đồng bộ hóa đơn điều chỉnh từ KVE sang KVS do về mặt hệ thống cần map (khớp) được hàng hóa giữa 2 bên. Định hướng khách hàng chỉ cần thao tác trên 1 phần mềm duy nhất là KVS.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-sky-100 text-sky-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-store"></i> Q&A: Phần mềm bán hàng (Tính năng dự kiến)
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-gray-400 flex flex-col gap-2">
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">
+                        <strong class="text-gray-600">Q:</strong> Hỗ trợ xuất hóa đơn điện tử nháp.<br>
+                        <strong class="text-emerald-600">A:</strong> Dự kiến Quý 2/2024.<br><br>
+                        <strong class="text-gray-600">Q:</strong> In hóa đơn có mã QR để khách hàng nhập thông tin để xuất hóa đơn.<br>
+                        <strong class="text-emerald-600">A:</strong> Dự kiến Quý 2/2024.<br><br>
+                        <strong class="text-gray-600">Q:</strong> Hóa đơn đầu vào có thể tự động chuyển dữ liệu sang phiếu nhập hàng để không cần thực hiện thao tác nhập hàng thủ công được không?<br>
+                        <strong class="text-emerald-600">A:</strong> Dự kiến Quý 2/2024.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-center p-12">
+            <div class="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 mb-6 animate-zoom-in">
+                <i class="fa-solid fa-list-check text-5xl"></i>
+            </div>
+            <h2 class="text-5xl font-extrabold text-blue-900 text-center animate-zoom-in delay-100">Q&A: Quy trình - Quy định</h2>
+            <div class="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mt-6 animate-zoom-in delay-200"></div>
+        </div>
+
+        <div class="slide glass flex flex-col items-center justify-start pt-20 pb-8 px-12 h-full overflow-y-auto custom-scroll">
+            <div class="inline-flex items-center gap-3 bg-orange-100 text-orange-800 px-5 py-2.5 rounded-full font-bold mb-8 animate-zoom-in shadow-sm shrink-0">
+                <i class="fa-solid fa-list-check"></i> Q&A: Quy trình - Quy định
+            </div>
+            <div class="w-full max-w-5xl flex flex-col gap-6 animate-zoom-in delay-100">
+                
+                <div class="bg-white/95 p-6 rounded-2xl shadow-md border-l-4 border-orange-500 flex flex-col gap-2">
+                    <div class="text-orange-600 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-circle-question"></i> Câu hỏi</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Hiện phần mềm kế toán đang bị lỗi nhiều gian hàng không nhảy đúng tiền thuế, cứ sửa chưa kịp lỗi này khách đã báo lỗi khác, sale tạo nhiều TK nhưng DVKH check thấy gian hàng đang có TK khác sẽ báo trùng và không xử lí tiếp, trong khi khách hàng hỏi liên tục.<br><br>DVKH báo đã đẩy lên Dev kiểm tra nhưng vẫn rất chậm, nhờ công ty bổ sung thêm nhân lực để hỗ trợ cho sale và khách hàng trong giai đoạn cao điểm này ạ.<br><br>(Ví dụ TT8102578, hoặc gian hàng dailyxuanhuu trước đã tạo TT8080663 lỗi sổ doanh thu ko cập nhật đủ số hóa đơn lên doanh thu, sửa xong lại dính lỗi thuế GTGT nhảy ko đúng).</p>
+                </div>
+                <div class="bg-emerald-50/90 p-6 rounded-2xl shadow-md border-l-4 border-emerald-500 flex flex-col gap-2">
+                    <div class="text-emerald-700 font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-check-circle"></i> Trả lời</div>
+                    <p class="text-gray-800 font-medium text-[16px] leading-relaxed">Đội ngũ Phát triển Sản phẩm đã tiếp nhận phản ánh, đang tăng cường nguồn lực rà soát đồng bộ và sẽ có phương án xử lý triệt để trong các Sprint tới để hỗ trợ nhanh nhất cho khách hàng.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slide glass flex items-center justify-center p-12">
+            <div class="flex flex-row items-center gap-12 max-w-6xl w-full">
+                <div class="flex-1 text-right border-r-4 border-blue-600 pr-12 animate-zoom-in">
+                    <h2 class="text-5xl font-extrabold text-blue-900 leading-tight">Phần 5<br>Tổng kết</h2>
+                </div>
+                <div class="flex-1 animate-zoom-in" style="animation-delay: 0.1s;">
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-gem text-blue-600"></i> Đúc kết giá trị cốt lõi</li>
+                        <li class="flex items-center gap-4 text-xl text-gray-800 font-medium"><i class="fa-solid fa-route text-blue-600"></i> Định hướng hành động</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide flex items-center justify-center p-8">
+            <div class="bg-white/80 backdrop-blur-xl p-12 rounded-3xl shadow-2xl border border-white/50 max-w-4xl w-full text-center animate-zoom-in">
+                <i class="fa-solid fa-flag-checkered text-6xl text-blue-600 mb-6 drop-shadow-md"></i>
+                <h1 class="text-4xl font-extrabold text-blue-900 mb-6 leading-tight">Nắm vững giải pháp Easy Legal<br>là chìa khóa chốt sale 2026!</h1>
+                <div class="h-1.5 w-24 bg-blue-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-xl text-gray-600 font-medium">Trân trọng cảm ơn sự tham gia của toàn đội ngũ.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const logo = document.getElementById('global-logo');
+
+        function updateUI(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                    const animated = slide.querySelectorAll('.animate-zoom-in');
+                    animated.forEach(el => { el.style.animation = 'none'; el.offsetHeight; el.style.animation = ''; });
+                    
+                    const isInfographic = slide.getAttribute('data-type') === 'infographic';
+                    if (isInfographic) logo.style.opacity = '0';
+                    else logo.style.opacity = '1';
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+        function nextSlide() { currentSlide = (currentSlide + 1) % totalSlides; updateUI(currentSlide); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; updateUI(currentSlide); }
+        function toggleFullScreen() { if (!document.fullscreenElement) document.documentElement.requestFullscreen(); else if (document.exitFullscreen) document.exitFullscreen(); }
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            else if (e.key === 'ArrowLeft') prevSlide();
+            else if (e.key === 'Home') { currentSlide = 0; updateUI(currentSlide); }
+            else if (e.key === 'End') { currentSlide = totalSlides - 1; updateUI(currentSlide); }
+            else if (e.key.toLowerCase() === 'f') toggleFullScreen();
+        });
+        if (totalSlides > 0) updateUI(currentSlide);
+    </script>
+</body>
+</html>
